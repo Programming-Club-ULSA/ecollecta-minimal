@@ -117,8 +117,8 @@ class Species:
         if not ext:
             ext = ".jpg"
 
-        self.image_url = f"/images/{slug_name}-thumb{ext}"
-        self.pdf_url = f"/pdfs/{slug_name}.pdf"
+        self.image_url = f"/ecollecta-minimal/images/{slug_name}-thumb{ext}"
+        self.pdf_url = f"/ecollecta-minimal/pdfs/{slug_name}.pdf"
 
     @property
     def scientific_name(self):
