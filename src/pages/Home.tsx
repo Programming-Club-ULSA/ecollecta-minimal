@@ -101,38 +101,53 @@ function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {featuredSpecies.map((tree) => (
-            <Card key={tree.id} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <div className="h-52 w-full overflow-hidden">
+            <Card 
+              key={tree.id} 
+              className="group relative overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 bg-white"
+            >
+              {tree.conservationStatus === 'EN' && (
+                <div className="absolute top-4 right-4 z-20 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider shadow-md">
+                  En Peligro
+                </div>
+              )}
+
+              <div className="relative h-64 w-full overflow-hidden">
                 <img
                   src={tree.imageUrl}
                   alt={tree.commonName}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 transform-gpu"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
 
-              <CardHeader>
-                <CardTitle>{tree.commonName}</CardTitle>
-                <p className="italic text-slate-500">
+              <CardHeader className="relative bg-white transition-colors duration-500">
+                <CardTitle className="text-xl group-hover:text-green-700 transition-colors">
+                  {tree.commonName}
+                </CardTitle>
+                <p className="italic text-slate-500 font-serif">
                   {tree.scientificName}
                 </p>
               </CardHeader>
 
-              <CardContent>
-                <Button asChild className="w-full bg-green-600 hover:bg-green-700 text-white">
+              <CardContent className="bg-white">
+                <Button asChild className="w-full bg-slate-900 group-hover:bg-green-600 text-white border-none transition-all duration-300">
                   <Link to={`/species/${tree.id}`}>
-                    Ver Ficha Completa
+                    Explorar Ficha
                   </Link>
                 </Button>
               </CardContent>
             </Card>
           ))}
         </div>
-        <Button asChild variant="outline">
+
+        <div className="mt-10 flex justify-center">
+          <Button asChild variant="outline" className="border-green-200 text-green-700 hover:bg-green-50">
             <Link to="/archive">
-                <BookOpen className="mr-2 h-4 w-4" />
-                Explorar Especies
+              <BookOpen className="mr-2 h-4 w-4" />
+              Explorar Especies
             </Link>
-        </Button>
+          </Button>
+        </div>
       </section>
 
       {/* BIODIVERSITY IMPORTANCE */}
@@ -162,9 +177,8 @@ function Home() {
         </h3>
 
         <p className="text-slate-600 leading-relaxed">
-          Cada especie del campus cuenta con un código QR único. 
-          Al escanearlo con tu dispositivo móvil, accederás 
-          directamente a su ficha técnica digital en formato PDF.
+          Encontrarás códigos QR en cada especie del campus. Al escanearlos con tu dispositivo, accederás a una ficha digital con información científica validada, imágenes y datos de conservación.
+          Este sistema promueve la educación ambiental y la conexión con nuestro entorno natural, facilitando el acceso a conocimientos botánicos de manera interactiva y accesible para toda la comunidad universitaria.
         </p>
       </section>
 

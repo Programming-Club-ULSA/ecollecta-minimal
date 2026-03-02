@@ -126,10 +126,11 @@
 
 @keyframes fall {
   0% {
-    transform: translateY(-10vh) translateX(0px) rotate(0deg);
+    transform: translate3d(0, -15vh, 0) rotate(0deg);
   }
   100% {
-    transform: translateY(110vh) translateX(40px) rotate(360deg);
+    transform: translate3d(var(--drift, 40px), 110vh, 0)
+      rotate(var(--leaf-rotate, 360deg));
   }
 }
 
@@ -137,4 +138,5 @@
   animation-name: fall;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  will-change: transform;
 }
