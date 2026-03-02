@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Leaf, QrCode, BookOpen, Trees } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { getFeaturedSpecies } from "@/lib/species";
+import { getFeaturedSpecies, totalSpeciesCount, totalEndangeredSpeciesCount } from "@/lib/species";
 import type { Species } from "@/types/species";
 import { FallingLeaves } from "@/components/FallingLeaves";
 
@@ -13,11 +13,6 @@ function Home() {
   useEffect(() => {
     getFeaturedSpecies().then(setFeaturedSpecies);
   }, []);
-
-  const totalSpecies = featuredSpecies.length;
-  const endangeredCount = featuredSpecies.filter(
-    (s) => s.conservationStatus === "EN" || s.conservationStatus === "CR"
-  ).length;
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white font-sans relative">
@@ -69,7 +64,7 @@ function Home() {
             <CardTitle>Total de Especies</CardTitle>
           </CardHeader>
           <CardContent className="text-4xl font-bold text-green-600">
-            {totalSpecies}
+            {totalSpeciesCount()}
           </CardContent>
         </Card>
 
@@ -78,7 +73,7 @@ function Home() {
             <CardTitle>Especies en Riesgo</CardTitle>
           </CardHeader>
           <CardContent className="text-4xl font-bold text-red-500">
-            {endangeredCount}
+            {totalEndangeredSpeciesCount()}
           </CardContent>
         </Card>
 
