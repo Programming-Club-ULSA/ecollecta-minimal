@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Search, Leaf, BookOpenText } from "lucide-react";
+import { ArrowLeft, Search, BookOpenText } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { getAllSpecies } from "@/lib/species";
