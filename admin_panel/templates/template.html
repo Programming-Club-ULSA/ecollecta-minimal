@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { width: 210mm; height: 297mm; margin: 0 auto; background: white; }
+
+        .markdown-content p { margin: 0 0 8px 0; }
+        .markdown-content ul, .markdown-content ol { margin: 0 0 8px 18px; }
+        .markdown-content li { margin-bottom: 3px; }
+
+        .section-title {
+            margin: 14px 0 8px 0;
+            font-weight: 700;
+            color: #14532d;
+            border-bottom: 2px solid #d1d5db;
+            padding-bottom: 4px;
+        }
+
+        .tax-label {
+            font-weight: 600;
+            color: #475569;
+        }
+    </style>
+</head>
+
+<body class="p-12 font-sans text-slate-800 relative">
+
+    <header class="border-b-4 border-green-700 pb-6 mb-8">
+
+        <h1 class="text-4xl font-bold text-slate-900 tracking-tight">
+            {{ common_name }}
+        </h1>
+
+        <h2 class="text-2xl mt-2 text-slate-700">
+            <span class="italic">
+                {{ taxonomy.genus }} {{ taxonomy.species }}
+            </span>
+            {% if taxonomy.authority %}
+                <span class="not-italic text-slate-500">
+                    {{ taxonomy.authority }}
+                </span>
+            {% endif %}
+        </h2>
+
+        <div class="mt-4 inline-block bg-green-100 text-green-900 px-4 py-2 rounded-md font-semibold text-sm">
+            IUCN Status: {{ conservation_code }} — {{ conservation_status }}
+        </div>
+
+    </header>
+
+    <div class="w-full h-72 overflow-hidden mb-8 border border-slate-300">
+        <img src="{{ image_absolute_path }}" alt="{{ common_name }}" class="w-full h-full object-cover">
+    </div>
+
+    <main class="grid grid-cols-3 gap-8 mb-24">
+
+        <div class="col-span-2 text-justify text-base leading-relaxed">
+
+            <h3 class="section-title">Descripción e Información</h3>
+            <div class="markdown-content">
+                {{ description_html | safe }}
+            </div>
+
+        </div>
+
+        <aside class="bg-slate-50 p-6 border border-slate-200 text-sm h-fit">
+
+            <h3 class="font-bold text-slate-800 mb-4">Clasificación Taxonómica</h3>
+
+            <ul class="space-y-2">
+                <li><span class="tax-label">Reino:</span> {{ taxonomy.kingdom }}</li>
+                <li><span class="tax-label">Filo / División:</span> {{ taxonomy.phylum }}</li>
+                <li><span class="tax-label">Clase:</span> {{ taxonomy.class_ }}</li>
+                <li><span class="tax-label">Orden:</span> {{ taxonomy.order }}</li>
+                <li><span class="tax-label">Familia:</span> {{ taxonomy.family }}</li>
+                <li><span class="tax-label">Género:</span> {{ taxonomy.genus }}</li>
+                <li><span class="tax-label">Especie:</span> {{ taxonomy.species }}</li>
+                {% if taxonomy.authority %}
+                <li><span class="tax-label">Autoridad:</span> {{ taxonomy.authority }}</li>
+                {% endif %}
+            </ul>
+
+            <div class="mt-6">
+                <h4 class="font-bold text-slate-800 mb-2">Estado de Conservación</h4>
+                <p>
+                    Categoría oficial según la Lista Roja de la IUCN:
+                </p>
+                <p class="font-semibold mt-1">
+                    {{ conservation_code }} — {{ conservation_status }}
+                </p>
+            </div>
+
+        </aside>
+
+    </main>
+
+    <footer class="border-t border-slate-300 text-xs text-slate-600 py-4 mt-12 w-full">
+        <div class="flex justify-between">
+
+            <div class="w-2/3">
+                <p>
+                    Clasificación taxonómica basada en el sistema de nomenclatura binomial establecido por 
+                    Carl Linnaeus y regulado por los Códigos Internacionales de Nomenclatura (ICN / ICZN).
+                </p>
+                <p class="mt-1">
+                    El estado de conservación sigue las Categorías y Criterios de la Lista Roja de la IUCN, Versión 3.1.
+                </p>
+            </div>
+
+            <div class="text-right w-1/3">
+                <p>Documento generado/actualizado</p>
+                <p>{{ generation_date }}</p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>

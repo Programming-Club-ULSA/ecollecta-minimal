@@ -15,6 +15,7 @@ from PySide6.QtWidgets import (
     QPushButton,
     QTableWidget,
     QTableWidgetItem,
+    QHeaderView,
     QVBoxLayout,
     QWidget,
 )
@@ -63,9 +64,17 @@ class GUIAdminPanel(QMainWindow):
 
         self.table = QTableWidget(0, 4)
         self.table.setHorizontalHeaderLabels(["QR ID", "Scientific Name", "Common Name", "Conservation"])
+
+        header = self.table.horizontalHeader()
+        header.setSectionResizeMode(0, QHeaderView.ResizeMode.ResizeToContents)
+        header.setSectionResizeMode(1, QHeaderView.ResizeMode.Stretch)
+        header.setSectionResizeMode(2, QHeaderView.ResizeMode.Stretch)
+        header.setSectionResizeMode(3, QHeaderView.ResizeMode.ResizeToContents)
+        self.table.setStyleSheet("QTableWidget::item { padding: 5px; }")
+
+        # Your existing settings
         self.table.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectRows)
         self.table.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)
-        self.table.horizontalHeader().setStretchLastSection(True)
         self.table.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
         self.table.verticalHeader().setVisible(False)
 
