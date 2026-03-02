@@ -9,7 +9,7 @@ IMAGES_PATH = os.path.join(PUBLIC_PATH, 'images')
 PDFS_PATH = os.path.join(PUBLIC_PATH, 'pdfs')
 QRS_PATH = os.path.join(PUBLIC_PATH, 'qrs')
 DATA_FILE = os.path.join(os.path.dirname(__file__), 'src', 'data', 'species.json')
-DEPLOYMENT_URL = "https://programming-club-ulsa.github.io/ecollecta-minimal"
+DEPLOYMENT_URL = "https://programming-club-ulsa.github.io"
 
 
 def validate_paths():
