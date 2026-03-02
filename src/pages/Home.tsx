@@ -3,15 +3,21 @@ import { Link } from "react-router-dom";
 import { Leaf, QrCode, BookOpen, Trees } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { getFeaturedSpecies, totalSpeciesCount, totalEndangeredSpeciesCount } from "@/lib/species";
+import { getFeaturedSpecies, getSpeciesCount, getVulnerableSpeciesCount, getEndangeredSpeciesCount } from "@/lib/species";
 import type { Species } from "@/types/species";
 import { FallingLeaves } from "@/components/FallingLeaves";
 
 function Home() {
   const [featuredSpecies, setFeaturedSpecies] = useState<Species[]>([]);
+  const [totalSpecies, setTotalSpecies] = useState<number>(0);
+  const [vulnerableCount, setVulnerableCount] = useState<number>(0);
+  const [endangeredCount, setEndangeredCount] = useState<number>(0);
 
   useEffect(() => {
     getFeaturedSpecies().then(setFeaturedSpecies);
+    getSpeciesCount().then(setTotalSpecies);
+    getVulnerableSpeciesCount().then(setVulnerableCount);
+    getEndangeredSpeciesCount().then(setEndangeredCount);
   }, []);
 
   return (
@@ -64,7 +70,16 @@ function Home() {
             <CardTitle>Total de Especies</CardTitle>
           </CardHeader>
           <CardContent className="text-4xl font-bold text-green-600">
-            {totalSpeciesCount()}
+            {totalSpecies}
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Especies Vulnerables</CardTitle>
+          </CardHeader>
+          <CardContent className="text-4xl font-bold text-yellow-500">
+            {vulnerableCount}
           </CardContent>
         </Card>
 
@@ -73,7 +88,7 @@ function Home() {
             <CardTitle>Especies en Riesgo</CardTitle>
           </CardHeader>
           <CardContent className="text-4xl font-bold text-red-500">
-            {totalEndangeredSpeciesCount()}
+            {endangeredCount}
           </CardContent>
         </Card>
 
@@ -84,6 +99,24 @@ function Home() {
           <CardContent className="text-sm text-slate-600 leading-relaxed">
             Documentación científica, educación ecológica y preservación 
             del patrimonio natural universitario.
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Educación Ambiental</CardTitle>
+          </CardHeader>
+          <CardContent className="text-sm text-slate-600 leading-relaxed">
+            Fomentamos la conciencia ecológica a través de la información accesible y validada.
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Ingeniería y Naturaleza</CardTitle>
+          </CardHeader>
+          <CardContent className="text-sm text-slate-600 leading-relaxed">
+            Desde la ingeniería, promovemos la conexión con nuestro entorno natural para un futuro sostenible.
           </CardContent>
         </Card>
       </section>

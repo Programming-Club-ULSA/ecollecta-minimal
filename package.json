@@ -1,7 +1,7 @@
 {
   "name": "ecollecta-minimal",
   "private": true,
-  "version": "1.6",
+  "version": "1.7",
   "type": "module",
   "homepage": "https://programming-club-ulsa.github.io/ecollecta-minimal",
   "scripts": {
