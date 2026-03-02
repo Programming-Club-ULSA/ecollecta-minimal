@@ -122,3 +122,18 @@
     @apply bg-background text-foreground;
     }
 }
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) translateX(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(110vh) translateX(40px) rotate(360deg);
+  }
+}
+
+.animate-fall {
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
