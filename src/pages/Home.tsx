@@ -59,7 +59,7 @@ function Home() {
             }
           >
             <BookOpen className="mr-2 h-4 w-4" />
-            Explorar Especies
+            Nuestras Especies
           </Button>
         </div>
       </section>
@@ -129,6 +129,12 @@ function Home() {
             </Card>
           ))}
         </div>
+        <Button asChild variant="outline">
+            <Link to="/archive">
+                <BookOpen className="mr-2 h-4 w-4" />
+                Explorar Especies
+            </Link>
+        </Button>
       </section>
 
       {/* BIODIVERSITY IMPORTANCE */}
