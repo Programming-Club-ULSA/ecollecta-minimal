@@ -19,5 +19,26 @@
     "conservationStatus": "NE",
     "imageUrl": "/ecollecta-minimal/images/teca-thumb.jpg",
     "pdfUrl": "/ecollecta-minimal/pdfs/teca.pdf"
+  },
+  {
+    "id": "QR-PLA_TRA_LIL_POA_POA_BAM_VUL-F32136",
+    "scientificName": "Bambusa vulgaris",
+    "fullScientificName": "Bambusa vulgaris",
+    "commonName": "Bambú",
+    "description": "Gramínea leñosa de rápido crecimiento originaria de Asia tropical (principalmente India, China y el Sudeste Asiático). Aunque existen más de 1000 especies de bambú, *Bambusa vulgaris* es la más común y ampliamente cultivada.\n\n### Descripción Botánica\n* **Tallo (Culmo):** Leñoso, cilíndrico y hueco con nudos y entrenudos definidos; de color verde amarillento o dorado, con diámetros de 5 a 15 cm.\n* **Altura:** Generalmente entre 10 y 25 metros, aunque puede alcanzar hasta los 30 metros en condiciones óptimas.\n* **Hojas:** Alternas, alargadas, lanceoladas y de un color verde intenso.\n* **Sistema Radicular:** Raíces rizomatosas que forman una extensa red subterránea, de la cual emergen nuevos brotes.\n* **Flor y Fruto:** Inflorescencias en racimos o panículas. La floración es un evento muy poco frecuente que puede tardar décadas. Produce un fruto tipo cariopsis, similar al de los cereales.\n\n### Ecología y Distribución\nAmpliamente distribuida en regiones tropicales, subtropicales y templadas de Asia, África y América.\n* **Altitud y Clima:** Óptima desde el nivel del mar hasta los 1500 m s.n.m. Prefiere temperaturas de 20 °C a 30 °C y precipitaciones anuales de 1200 a 4000 mm.\n* **Suelos:** Requiere suelos franco-arenosos o arcillosos que sean profundos, fértiles y con muy buen drenaje (no tolera el encharcamiento prolongado). pH ideal entre 6 y 7.\n* **Luz y Resistencia:** Especie que prefiere lugares soleados (aunque tolera sombra ligera) y puede soportar períodos cortos de sequía.\n\n### Usos Principales\nEs un recurso altamente versátil y sostenible:\n* Construcción sostenible (viviendas rurales, andamios, techos y pisos).\n* Elaboración de muebles, artesanías, paneles y laminados.\n* Fabricación de papel.\n* Producción de carbón vegetal y biomasa.\n* Restauración ecológica (control de erosión y recuperación de suelos gracias a sus rizomas).\n* Alimentación (los brotes tiernos de algunas especies son comestibles).",
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class_": "Liliopsida",
+      "order": "Poales",
+      "family": "Poaceae",
+      "genus": "Bambusa",
+      "species": "vulgaris",
+      "authority": "",
+      "scientificName": "Bambusa vulgaris"
+    },
+    "conservationStatus": "LC",
+    "imageUrl": "/ecollecta-minimal/images/bambú-thumb.png",
+    "pdfUrl": "/ecollecta-minimal/pdfs/bambú.pdf"
   }
 ]
