@@ -40,5 +40,47 @@
     "conservationStatus": "LC",
     "imageUrl": "/ecollecta-minimal/images/bambusa-vulgaris-thumb.png",
     "pdfUrl": "/ecollecta-minimal/pdfs/bambusa-vulgaris.pdf"
+  },
+  {
+    "id": "QR-PLA_TRA_MAG_ERI_SAP_SID_CAP-E4F598",
+    "scientificName": "Sideroxylon capiri",
+    "fullScientificName": "Sideroxylon capiri Linnaeus, 1758",
+    "commonName": "Tempisque",
+    "description": "Árbol de mediano a gran porte, alcanza 30-35 metros de altura y diámetros (DAP) de hasta 100 cm o más. Originario de la región mesoamericana, es una especie emblemática del bosque seco tropical.\n\n### Descripción Botánica\n* **Tronco y Corteza:** Tronco derecho, a veces anguloso con contrafuertes. La corteza gris-café se desprende en placas rectangulares con la edad.\n* **Hojas:** Simples y alternas, de tamaño variable (4–22 cm de largo). Poseen bordes lisos u ondulados y un ápice agudo.\n* **Flores:** Pequeñas, de color amarillo-verdoso, agrupadas en fascículos de 10-15 flores.\n* **Fruto:** Baya ovoide (3–4 cm de largo) que se torna amarilla al madurar. Contiene una semilla grande y es comestible.\n\n### Ecología y Distribución\nSe encuentra en paisajes tropicales, especialmente en zonas de bosque seco.\n* **Altitud y Clima:** Crece desde el nivel del mar hasta los ~1,200 m s.n.m. Prefiere temperaturas medias entre 20°C y 24°C.\n* **Adaptabilidad:** Especie heliófita con raíces profundas que le permiten sobrevivir a periodos de sequía prolongados o suelos menos favorables.\n\n### Propiedades de la Madera y Usos\nMadera dura, pesada y de alta durabilidad natural, reconocida por su resistencia al desgaste y la humedad.\n* **Construcción:** Muy utilizada para postes, cercas, vigas y estructuras expuestas en zonas rurales.\n* **Alimentación:** Los frutos pueden consumirse crudos o cocidos.\n* **Valor Ecológico:** Utilizada en restauración ecológica y conservación de riberas de ríos.\n* **Forraje:** Sus hojas sirven como alimento para el ganado durante la época seca.",
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class_": "Magnoliopsida",
+      "order": "Ericales",
+      "family": "Sapotaceae",
+      "genus": "Sideroxylon",
+      "species": "capiri",
+      "authority": "Linnaeus, 1758",
+      "scientificName": "Sideroxylon capiri"
+    },
+    "conservationStatus": "LC",
+    "imageUrl": "/ecollecta-minimal/images/sideroxylon-capiri-thumb.jpeg",
+    "pdfUrl": "/ecollecta-minimal/pdfs/sideroxylon-capiri.pdf"
+  },
+  {
+    "id": "QR-PLA_TRA_MAG_MAL_MAL_CEI_PEN-40364F",
+    "scientificName": "Ceiba pentandra",
+    "fullScientificName": "Ceiba pentandra (L.) Gaertn",
+    "commonName": "Ceiba",
+    "description": "Árbol forestal de gran porte, considerado especie emblemática y sagrada en muchas culturas mesoamericanas. Es uno de los árboles más altos del trópico americano, alcanzando alturas de hasta 70 metros en su hábitat natural.\n\n### Descripción Botánica\n* **Tronco y Raíces:** Tronco recto y cilíndrico que desarrolla impresionantes raíces tablares (contrafuertes) en la base. Los ejemplares jóvenes presentan espinas cónicas en la corteza gris.\n* **Hojas:** Palmadas y compuestas, con 5 a 9 folíolos alargados de color verde intenso.\n* **Flores:** Grandes y vistosas, de color blanco o rosado con pétalos carnosos. Aparecen antes que el follaje nuevo.\n* **Fruto:** Una cápsula alargada que libera semillas envueltas en una fibra sedosa y ligera conocida como \"kapok\" o \"lana de ceiba\".\n\n\n\n### Ecología y Distribución\nSe distribuye ampliamente desde México hasta la Amazonía, siendo muy común en las llanuras de Nicaragua.\n* **Altitud y Clima:** Crece óptimamente desde el nivel del mar hasta los 800 m s. n. m., con temperaturas entre 22 °C y 30 °C.\n* **Luz:** Especie heliófita que requiere plena exposición solar.\n* **Suelos:** Posee gran adaptabilidad, aunque prefiere suelos profundos y fértiles con buen drenaje.\n\n### Importancia y Usos\n* **Ecológico:** Alberga una vasta biodiversidad de epífitas y fauna en su dosel.\n* **Tradicional:** Su fibra (kapok) se ha usado para fabricar salvavidas y almohadas por ser hidrófuga.\n* **Cultural:** Considerada el \"Árbol Sagrado\" (Yaxché) por los Mayas, representando el eje del mundo.",
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class_": "Magnoliopsida",
+      "order": "Malvales",
+      "family": "Malvaceae",
+      "genus": "Ceiba",
+      "species": "pentandra",
+      "authority": "(L.) Gaertn",
+      "scientificName": "Ceiba pentandra"
+    },
+    "conservationStatus": "LC",
+    "imageUrl": "/ecollecta-minimal/images/ceiba-pentandra-thumb.jpg",
+    "pdfUrl": "/ecollecta-minimal/pdfs/ceiba-pentandra.pdf"
   }
 ]
