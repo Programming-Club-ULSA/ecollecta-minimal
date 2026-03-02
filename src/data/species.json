@@ -82,5 +82,110 @@
     "conservationStatus": "LC",
     "imageUrl": "/ecollecta-minimal/images/ceiba-pentandra-thumb.jpg",
     "pdfUrl": "/ecollecta-minimal/pdfs/ceiba-pentandra.pdf"
+  },
+  {
+    "id": "QR-PLA_TRA_MAG_CUC_CUC_CUC_ARG-FA462F",
+    "scientificName": "Cucurbita argyrosperma",
+    "fullScientificName": "Cucurbita argyrosperma Huber",
+    "commonName": "Pipián",
+    "description": "Planta herbácea anual, rastrera o trepadora, ampliamente cultivada en América Central y México por sus frutos y semillas altamente nutritivas. Es un componente esencial de la agrobiodiversidad tradicional mesoamericana.\n\n### Descripción Botánica\n* **Tallo y Crecimiento:** Tallo áspero y ramificado que puede extenderse hasta 5 metros de longitud mediante zarcillos.\n* **Hojas:** Grandes y alternas con forma acorazonada; presentan una textura rugosa al tacto y márgenes lobulados.\n* **Flores:** De gran tamaño y color amarillo intenso. Son unisexuales, lo que significa que la misma planta produce flores masculinas y femeninas por separado.\n* **Fruto:** Tipo pepónide (calabaza) de forma variable, generalmente ovalado. Su cáscara es verde con manchas características amarillas o blancas.\n* **Semillas:** Planas y ovaladas de color blanco o crema. Son el componente más valorado por su alto contenido proteico y aceites.\n\n\n\n### Ecología y Distribución\nOriginaria de la región que comprende desde México hasta Centroamérica, adaptada a diversos climas tropicales.\n* **Hábito:** Requiere suelos bien drenados y ricos en materia orgánica.\n* **Luz:** Como la mayoría de las cucurbitáceas, es una especie heliófita que requiere exposición solar directa para la producción de frutos.\n\n### Usos Principales\n* **Alimenticio:** Se consumen los frutos tiernos, las flores en sopas y las semillas tostadas o molidas para preparar salsas tradicionales (como el pepián o pipián).\n* **Medicinal:** Tradicionalmente, las semillas se han utilizado como un antiparasitario natural efectivo.\n* **Agroindustrial:** Es una fuente potencial para la extracción de aceite vegetal y la fabricación de harinas proteicas.",
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class_": "Magnoliopsida",
+      "order": "Cucurbitales",
+      "family": "Cucurbitaceae",
+      "genus": "Cucurbita",
+      "species": "argyrosperma",
+      "authority": "Huber",
+      "scientificName": "Cucurbita argyrosperma"
+    },
+    "conservationStatus": "NE",
+    "imageUrl": "/ecollecta-minimal/images/cucurbita-argyrosperma-thumb.jpg",
+    "pdfUrl": "/ecollecta-minimal/pdfs/cucurbita-argyrosperma.pdf"
+  },
+  {
+    "id": "QR-PLA_TRA_MAG_MAL_MAL_QUA_AST-6DED0A",
+    "scientificName": "Quararibea asterolepis",
+    "fullScientificName": "Quararibea asterolepis Pittier",
+    "commonName": "Guácimo Molenillo",
+    "description": "Árbol forestal de tamaño mediano a grande, originario de América tropical. Su nombre popular, \"molenillo\", se debe a una característica disposición de sus ramas que permite fabricar el utensilio tradicional para batir el chocolate.\n\n### Descripción Botánica\n* **Altura y Tronco:** Alcanza entre 25 y 35 metros de altura. Posee un tronco recto, a veces con contrafuertes en la base. Su corteza es fibrosa, de color gris o pardo, y se desprende en placas con la edad.\n* **Hojas:** Simples y alternas, de forma ovalada o elíptica. Tienen una textura áspera al tacto y márgenes que pueden ser enteros o ligeramente ondulados.\n* **Flores:** Blancas o amarillo pálido, fragantes y con una forma estrellada característica.\n* **Fruto:** Redondeado y leñoso (o ligeramente carnoso), se torna amarillo al madurar. Es una fuente importante de alimento para la fauna silvestre, especialmente aves.\n\n\n\n### Ecología y Distribución\nSe distribuye ampliamente por las regiones tropicales de las Américas, adaptándose bien a climas húmedos y subhúmedos.\n* **Crecimiento:** Es una especie de rápido crecimiento, lo que la hace ideal para proyectos de cobertura forestal rápida.\n* **Ecológico:** Funciona como refugio y proveedor de alimento para diversas especies de animales.\n\n### Usos Principales\n* **Tradicional:** Su uso más emblemático es la fabricación de \"molenillos\" (batidores manuales) para el chocolate, aprovechando la ramificación verticilada de la especie.\n* **Maderable:** La madera es de color crema a marrón claro, fácil de trabajar. Se emplea en la fabricación de muebles rústicos, cajonería, enchapados y construcción ligera.\n* **Reforestación:** Utilizado en programas de recuperación de suelos y reforestación por su vigor y sombra.",
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class_": "Magnoliopsida",
+      "order": "Malvales",
+      "family": "Malvaceae",
+      "genus": "Quararibea",
+      "species": "asterolepis",
+      "authority": "Pittier",
+      "scientificName": "Quararibea asterolepis"
+    },
+    "conservationStatus": "NE",
+    "imageUrl": "/ecollecta-minimal/images/quararibea-asterolepis-thumb.jpg",
+    "pdfUrl": "/ecollecta-minimal/pdfs/quararibea-asterolepis.pdf"
+  },
+  {
+    "id": "QR-PLA_TRA_MAG_SAP_MEL_SWI_MAC-3A4AD4",
+    "scientificName": "Swietenia macrophylla",
+    "fullScientificName": "Swietenia macrophylla King",
+    "commonName": "Caoba",
+    "description": "Árbol maderable de gran porte y extraordinario valor comercial, originario de América tropical. Es considerada una de las maderas más finas del mundo debido a su belleza, durabilidad y facilidad de trabajo.\n\n### Descripción Botánica\n* **Altura y Tronco:** Alcanza comúnmente de 30 a 40 metros de altura. Su tronco es recto y cilíndrico, con una corteza gruesa de color marrón rojizo que presenta grietas irregulares en ejemplares adultos.\n* **Hojas:** Compuestas y alternas, formadas por 6 a 10 pares de folíolos ovales con bordes lisos y una coloración verde brillante.\n* **Flores:** Pequeñas, de color blanco-amarillento, dispuestas en panículas terminales.\n* **Fruto y Semillas:** Produce una cápsula leñosa y ovalada (10-15 cm) que se abre en cinco valvas al madurar. De su interior emergen numerosas semillas aladas, diseñadas para ser dispersadas por el viento.\n\n\n\n### Ecología y Distribución\nSe distribuye naturalmente desde el sur de México hasta la cuenca del Amazonas. En Nicaragua, es una especie emblemática tanto en el Caribe como en parches de bosque tropical seco del Pacífico.\n* **Clima y Suelo:** Prefiere climas tropicales húmedos o subhúmedos (23°C - 32°C). Requiere suelos profundos, fértiles y con buen drenaje, ya que es sensible al encharcamiento.\n* **Luz:** Es una especie heliófita que necesita plena exposición solar para su desarrollo óptimo.\n\n### Usos Principales\n* **Maderable:** Es la madera por excelencia para la ebanistería fina, fabricación de instrumentos musicales, molduras, puertas y construcción de embarcaciones de lujo.\n* **Forestal:** Muy utilizada en plantaciones comerciales y programas de reforestación debido a su alto valor económico.\n* **Ornamental:** Valorada en parques y espacios abiertos por su imponente porte y la sombra que proporciona.",
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class_": "Magnoliopsida",
+      "order": "Sapindales",
+      "family": "Meliaceae",
+      "genus": "Swietenia",
+      "species": "macrophylla",
+      "authority": "King",
+      "scientificName": "Swietenia macrophylla"
+    },
+    "conservationStatus": "VU",
+    "imageUrl": "/ecollecta-minimal/images/swietenia-macrophylla-thumb.png",
+    "pdfUrl": "/ecollecta-minimal/pdfs/swietenia-macrophylla.pdf"
+  },
+  {
+    "id": "QR-PLA_TRA_LIL_ARE_ARE_SAB_MEX-8F0FA8",
+    "scientificName": "Sabal mexicana",
+    "fullScientificName": "Sabal mexicana Mart.",
+    "commonName": "Palma de Abanico",
+    "description": "Palma perenne de tronco solitario y majestuoso, nativa de Mesoamérica. Es ampliamente reconocida por su resistencia y su corona de hojas en forma de abanico, siendo un elemento icónico de las zonas tropicales secas y costeras.\n\n### Descripción Botánica\n* **Altura y Tronco:** Alcanza entre 10 y 25 metros en su etapa adulta. Su tronco es cilíndrico (30-60 cm de diámetro) y puede presentarse liso o cubierto por restos fibrosos de las bases de las hojas caídas.\n* **Hojas:** Grandes y coriáceas, con forma de abanico y un color verde brillante o gris verdoso. Miden entre 1.5 y 2 metros de largo.\n* **Flores:** Pequeñas e inflorescencias amarillentas que sobresalen de la copa.\n* **Fruto:** Produce drupas redondas que se tornan negras al madurar (1-1.5 cm), las cuales contienen semillas duras y brillantes.\n\n\n\n### Propagación y Manejo\n* **Crecimiento:** Aunque su inicio es lento, mantiene un ritmo constante una vez establecida en el sitio definitivo.\n* **Resistencia:** Es notablemente tolerante a la sequía una vez que el sistema radicular se ha desarrollado por completo.\n* **Mantenimiento:** Requiere podas mínimas, limitadas a la remoción de hojas secas para mantener la estética y prevenir nidos de insectos no deseados.\n\n### Usos Principales\n* **Ornamental:** Muy valorada en el diseño de paisajes, avenidas y parques universitarios por su elegancia.\n* **Tradicional:** Sus hojas son una materia prima esencial para el techado de viviendas rurales y la elaboración de artesanías como sombreros y canastos.\n* **Ecológico:** Es una especie clave para la fauna local, proveyendo refugio y alimento a aves y murciélagos.\n* **Construcción:** Su tronco, extremadamente resistente a la humedad y la pudrición, se utiliza para postes y estructuras ligeras.",
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class_": "Liliopsida",
+      "order": "Arecales",
+      "family": "Arecaceae",
+      "genus": "Sabal",
+      "species": "mexicana",
+      "authority": "Mart.",
+      "scientificName": "Sabal mexicana"
+    },
+    "conservationStatus": "NE",
+    "imageUrl": "/ecollecta-minimal/images/sabal-mexicana-thumb.png",
+    "pdfUrl": "/ecollecta-minimal/pdfs/sabal-mexicana.pdf"
+  },
+  {
+    "id": "QR-PLA_TRA_MAG_SAP_ANA_MAN_IND-4D66BD",
+    "scientificName": "Mangifera indica",
+    "fullScientificName": "Mangifera indica L.",
+    "commonName": "Mango",
+    "description": "Árbol frutal perenne de gran tamaño y longevidad, originario del sur de Asia. Es ampliamente cultivado en todo el mundo tropical por su valor alimenticio, su sombra densa y su adaptabilidad a diversos suelos.\n\n### Descripción Botánica\n* **Copa y Altura:** Alcanza entre 10 y 30 metros de altura. Su copa es densa y redondeada, proporcionando una de las sombras más frescas del trópico.\n* **Tronco:** Grueso y cilíndrico, puede superar el metro de diámetro en ejemplares centenarios. La corteza es gris oscura y se agrieta con la madurez.\n* **Hojas:** Simples y lanceoladas (15-30 cm). Un rasgo distintivo es que las hojas jóvenes presentan tonos rojizos o púrpuras antes de volverse verdes y correosas.\n* **Flores:** Pequeñas, amarillentas o rosadas, agrupadas en grandes panículas terminales muy fragantes.\n* **Fruto:** Una drupa carnosa de forma ovalada o redondeada. La pulpa es jugosa, fibrosa o lisa según la variedad, cubriendo una semilla plana y grande.\n\n\n\n### Ecología y Distribución\nEs común en todas las zonas bajas de Nicaragua, prosperando tanto en el Pacífico como en el Caribe.\n* **Clima:** Prefiere temperaturas entre 24 °C y 32 °C. Aunque tolera periodos secos, la floración se ve favorecida por una estación seca marcada.\n* **Suelos:** Requiere suelos profundos y bien drenados. Es sensible al encharcamiento prolongado, lo que puede causar pudrición radicular.\n* **Luz:** Especie heliófita; la falta de sol directo reduce drásticamente la producción de frutos.\n\n### Usos Principales\n* **Alimenticio:** Fruto de alto valor nutricional, rico en vitaminas A y C. Es un pilar de la seguridad alimentaria estacional.\n* **Madera:** Su madera es semidura y de color amarillento; se utiliza en la fabricación de muebles rústicos, cajas de embalaje y tableros.\n* **Medicinal:** En la medicina tradicional, las hojas y la corteza se utilizan en infusiones para tratar afecciones respiratorias y digestivas.\n* **Ecológico:** Es un excelente regulador del microclima local y provee alimento constante a la fauna silvestre (aves, murciélagos e insectos).",
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class_": "Magnoliopsida",
+      "order": "Sapindales",
+      "family": "Anacardiaceae",
+      "genus": "Mangifera",
+      "species": "indica",
+      "authority": "L.",
+      "scientificName": "Mangifera indica"
+    },
+    "conservationStatus": "NE",
+    "imageUrl": "/ecollecta-minimal/images/mangifera-indica-thumb.png",
+    "pdfUrl": "/ecollecta-minimal/pdfs/mangifera-indica.pdf"
   }
 ]

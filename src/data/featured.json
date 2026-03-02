@@ -19,5 +19,47 @@
     "conservationStatus": "NE",
     "imageUrl": "/ecollecta-minimal/images/teca-thumb.jpg",
     "pdfUrl": "/ecollecta-minimal/pdfs/teca.pdf"
+  },
+  {
+    "id": "QR-PLA_TRA_MAG_CUC_CUC_CUC_ARG-FA462F",
+    "scientificName": "Cucurbita argyrosperma",
+    "fullScientificName": "Cucurbita argyrosperma Huber",
+    "commonName": "Pipián",
+    "description": "Planta herbácea anual, rastrera o trepadora, ampliamente cultivada en América Central y México por sus frutos y semillas altamente nutritivas. Es un componente esencial de la agrobiodiversidad tradicional mesoamericana.\n\n### Descripción Botánica\n* **Tallo y Crecimiento:** Tallo áspero y ramificado que puede extenderse hasta 5 metros de longitud mediante zarcillos.\n* **Hojas:** Grandes y alternas con forma acorazonada; presentan una textura rugosa al tacto y márgenes lobulados.\n* **Flores:** De gran tamaño y color amarillo intenso. Son unisexuales, lo que significa que la misma planta produce flores masculinas y femeninas por separado.\n* **Fruto:** Tipo pepónide (calabaza) de forma variable, generalmente ovalado. Su cáscara es verde con manchas características amarillas o blancas.\n* **Semillas:** Planas y ovaladas de color blanco o crema. Son el componente más valorado por su alto contenido proteico y aceites.\n\n\n\n### Ecología y Distribución\nOriginaria de la región que comprende desde México hasta Centroamérica, adaptada a diversos climas tropicales.\n* **Hábito:** Requiere suelos bien drenados y ricos en materia orgánica.\n* **Luz:** Como la mayoría de las cucurbitáceas, es una especie heliófita que requiere exposición solar directa para la producción de frutos.\n\n### Usos Principales\n* **Alimenticio:** Se consumen los frutos tiernos, las flores en sopas y las semillas tostadas o molidas para preparar salsas tradicionales (como el pepián o pipián).\n* **Medicinal:** Tradicionalmente, las semillas se han utilizado como un antiparasitario natural efectivo.\n* **Agroindustrial:** Es una fuente potencial para la extracción de aceite vegetal y la fabricación de harinas proteicas.",
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class_": "Magnoliopsida",
+      "order": "Cucurbitales",
+      "family": "Cucurbitaceae",
+      "genus": "Cucurbita",
+      "species": "argyrosperma",
+      "authority": "Huber",
+      "scientificName": "Cucurbita argyrosperma"
+    },
+    "conservationStatus": "NE",
+    "imageUrl": "/ecollecta-minimal/images/cucurbita-argyrosperma-thumb.jpg",
+    "pdfUrl": "/ecollecta-minimal/pdfs/cucurbita-argyrosperma.pdf"
+  },
+  {
+    "id": "QR-PLA_TRA_MAG_SAP_ANA_MAN_IND-4D66BD",
+    "scientificName": "Mangifera indica",
+    "fullScientificName": "Mangifera indica L.",
+    "commonName": "Mango",
+    "description": "Árbol frutal perenne de gran tamaño y longevidad, originario del sur de Asia. Es ampliamente cultivado en todo el mundo tropical por su valor alimenticio, su sombra densa y su adaptabilidad a diversos suelos.\n\n### Descripción Botánica\n* **Copa y Altura:** Alcanza entre 10 y 30 metros de altura. Su copa es densa y redondeada, proporcionando una de las sombras más frescas del trópico.\n* **Tronco:** Grueso y cilíndrico, puede superar el metro de diámetro en ejemplares centenarios. La corteza es gris oscura y se agrieta con la madurez.\n* **Hojas:** Simples y lanceoladas (15-30 cm). Un rasgo distintivo es que las hojas jóvenes presentan tonos rojizos o púrpuras antes de volverse verdes y correosas.\n* **Flores:** Pequeñas, amarillentas o rosadas, agrupadas en grandes panículas terminales muy fragantes.\n* **Fruto:** Una drupa carnosa de forma ovalada o redondeada. La pulpa es jugosa, fibrosa o lisa según la variedad, cubriendo una semilla plana y grande.\n\n\n\n### Ecología y Distribución\nEs común en todas las zonas bajas de Nicaragua, prosperando tanto en el Pacífico como en el Caribe.\n* **Clima:** Prefiere temperaturas entre 24 °C y 32 °C. Aunque tolera periodos secos, la floración se ve favorecida por una estación seca marcada.\n* **Suelos:** Requiere suelos profundos y bien drenados. Es sensible al encharcamiento prolongado, lo que puede causar pudrición radicular.\n* **Luz:** Especie heliófita; la falta de sol directo reduce drásticamente la producción de frutos.\n\n### Usos Principales\n* **Alimenticio:** Fruto de alto valor nutricional, rico en vitaminas A y C. Es un pilar de la seguridad alimentaria estacional.\n* **Madera:** Su madera es semidura y de color amarillento; se utiliza en la fabricación de muebles rústicos, cajas de embalaje y tableros.\n* **Medicinal:** En la medicina tradicional, las hojas y la corteza se utilizan en infusiones para tratar afecciones respiratorias y digestivas.\n* **Ecológico:** Es un excelente regulador del microclima local y provee alimento constante a la fauna silvestre (aves, murciélagos e insectos).",
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class_": "Magnoliopsida",
+      "order": "Sapindales",
+      "family": "Anacardiaceae",
+      "genus": "Mangifera",
+      "species": "indica",
+      "authority": "L.",
+      "scientificName": "Mangifera indica"
+    },
+    "conservationStatus": "NE",
+    "imageUrl": "/ecollecta-minimal/images/mangifera-indica-thumb.png",
+    "pdfUrl": "/ecollecta-minimal/pdfs/mangifera-indica.pdf"
   }
 ]
