@@ -1,0 +1,23 @@
+[
+  {
+    "id": "QR-PLA_TRA_MAG_LAM_LAM_TEC_GRA-FCD045",
+    "scientificName": "Tectona grandis",
+    "fullScientificName": "Tectona grandis Linnaeus, 1758",
+    "commonName": "Teca",
+    "description": "Árbol de gran porte que puede alcanzar más de 30 m de altura y diámetros superiores a los 80 cm en condiciones favorables. Se caracteriza por un tronco recto, cilíndrico, con corteza exterior café claro, agrietada y escamosa.\n\n### Descripción Botánica\n* **Hojas:** Grandes, opuestas, de forma ovalada; el haz es verde oscuro y el envés es blanquecino y áspero (tomentoso).\n* **Flores:** Pequeñas, blancas o crema, agrupadas en panículas terminales.\n* **Fruto:** Drupa globosa pequeña, de color marrón, que contiene de una a cuatro semillas.\n\n### Ecología y Distribución\nEspecie heliófita (requiere plena exposición solar) cultivada ampliamente en regiones tropicales de América Latina, África y Asia.\n* **Altitud y Clima:** Óptima entre 0 y 1000 m s.n.m., con temperaturas de 22 °C a 28 °C y precipitaciones de 1000 a 2500 mm anuales.\n* **Estacionalidad:** Necesita un periodo seco marcado de 3 a 5 meses para su desarrollo ideal.\n* **Suelos:** Requiere suelos profundos, fértiles y bien drenados (franco-arenosos o arcillosos ligeros) con pH neutro o ligeramente ácido.\n\n### Usos Principales\nEs altamente valorada a nivel mundial por la calidad de su madera.\n* Construcción naval y de embarcaciones.\n* Fabricación de muebles finos y mobiliario de exteriores.\n* Pisos, puertas, ventanas, revestimientos y carpintería de lujo.\n* Estructuras, postes y molduras decorativas.",
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class_": "Magnoliopsida",
+      "order": "Lamiales",
+      "family": "Lamiaceae",
+      "genus": "Tectona",
+      "species": "grandis",
+      "authority": "Linnaeus, 1758",
+      "scientificName": "Tectona grandis"
+    },
+    "conservationStatus": "NE",
+    "imageUrl": "/images/teca-thumb.jpg",
+    "pdfUrl": "/pdfs/teca.pdf"
+  }
+]
