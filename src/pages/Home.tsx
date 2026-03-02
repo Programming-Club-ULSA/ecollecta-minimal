@@ -3,23 +3,21 @@ import { Link } from "react-router-dom";
 import { Leaf, QrCode, BookOpen, Trees } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { getAllSpecies } from "@/lib/species";
+import { getFeaturedSpecies } from "@/lib/species";
 import type { Species } from "@/types/species";
 import { FallingLeaves } from "@/components/FallingLeaves";
 
 function Home() {
-  const [species, setSpecies] = useState<Species[]>([]);
+  const [featuredSpecies, setFeaturedSpecies] = useState<Species[]>([]);
 
   useEffect(() => {
-    getAllSpecies().then(setSpecies);
+    getFeaturedSpecies().then(setFeaturedSpecies);
   }, []);
 
-  const totalSpecies = species.length;
-  const endangeredCount = species.filter(
+  const totalSpecies = featuredSpecies.length;
+  const endangeredCount = featuredSpecies.filter(
     (s) => s.conservationStatus === "EN" || s.conservationStatus === "CR"
   ).length;
-
-  const featured = species.slice(0, 3);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white font-sans relative">
@@ -102,7 +100,7 @@ function Home() {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {featured.map((tree) => (
+          {featuredSpecies.map((tree) => (
             <Card key={tree.id} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="h-52 w-full overflow-hidden">
                 <img
