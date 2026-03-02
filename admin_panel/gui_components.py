@@ -1,7 +1,9 @@
 import os
+import tempfile
 
 from PySide6.QtCore import QObject, Signal, Slot
 from PySide6.QtWidgets import (
+    QApplication,
     QComboBox,
     QDialog,
     QFileDialog,
@@ -163,12 +165,39 @@ class SpeciesDialog(QDialog):
             self.conservation_input.setCurrentIndex(index)
 
     def select_image(self):
+        """
+        Allows selecting an image from file OR from clipboard.
+        If clipboard contains an image, user is asked whether to use it.
+        """
+
+        clipboard = QApplication.clipboard()
+        mime = clipboard.mimeData()
+
+        # If clipboard contains image, ask user first
+        if mime.hasImage():
+            reply = QMessageBox.question(
+                self,
+                "Image Detected in Clipboard",
+                "An image was detected in the clipboard.\n\nDo you want to use it?",
+                QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No
+            )
+
+            if reply == QMessageBox.StandardButton.Yes:
+                image = clipboard.image()
+                temp_dir = tempfile.gettempdir()
+                temp_path = os.path.join(temp_dir, "clipboard_species_image.png")
+                image.save(temp_path)
+                self.image_path_input.setText(temp_path)
+                return
+
+        # Otherwise fallback to file selection
         file_path, _ = QFileDialog.getOpenFileName(
             self,
             "Select species image",
             "",
-            "Image files (*.jpg *.jpeg *.png)",
+            "Image files (*.jpg *.jpeg *.png)"
         )
+
         if file_path:
             self.image_path_input.setText(file_path)
 
