@@ -1,17 +1,11 @@
 import type { Species } from "@/types/species";
+import speciesData from "@/data/species.json";
+import featuredData from "@/data/featured.json";
 
 export async function getAllSpecies(): Promise<Species[]> {
-  const response = await fetch("/data/species.json");
+  return speciesData as Species[];
+}
 
-  if (!response.ok) {
-    throw new Error("Failed to load species data");
-  }
-
-  const data = await response.json();
-
-  if (!Array.isArray(data)) {
-    throw new Error("Invalid species JSON format");
-  }
-
-  return data as Species[];
+export async function getFeaturedSpecies(): Promise<Species[]> {
+  return featuredData as Species[];
 }
