@@ -1,6 +1,8 @@
 import hashlib
 import os
 from enum import Enum
+import re
+import unicodedata
 
 from admin_panel.utils import slugify
 
@@ -111,14 +113,47 @@ class Species:
 
         self.id = self._generate_id()
 
-        slug_name = slugify(self.common_name or self.scientific_name)
-
         ext = os.path.splitext(image_source)[1].lower() if image_source else ".jpg"
         if not ext:
             ext = ".jpg"
 
-        self.image_url = f"/ecollecta-minimal/images/{slug_name}-thumb{ext}"
-        self.pdf_url = f"/ecollecta-minimal/pdfs/{slug_name}.pdf"
+        self.image_url = f"/ecollecta-minimal/images/{self.slug_name}-thumb{ext}"
+        self.pdf_url = f"/ecollecta-minimal/pdfs/{self.slug_name}.pdf"
+
+    @property
+    def slug_name(self) -> str:
+        """
+        Returns a filesystem-safe and URL-friendly slug based on the scientific name.
+        
+        Examples:
+            "Quercus robur" -> "quercus-robur"
+            "Bambú vulgaris" -> "bambu-vulgaris"
+            "Pinus sp." -> "pinus-sp"
+        """
+
+        name = (self.scientific_name or "").strip()
+
+        if not name:
+            return "unknown-species"
+
+        # Normalize Unicode (remove accents)
+        normalized = unicodedata.normalize("NFKD", name)
+        ascii_name = normalized.encode("ascii", "ignore").decode("ascii")
+
+        # Lowercase
+        ascii_name = ascii_name.lower()
+
+        # Replace any non-alphanumeric character with dash
+        slug = re.sub(r"[^a-z0-9]+", "-", ascii_name)
+
+        # Remove leading/trailing dashes
+        slug = slug.strip("-")
+
+        # Collapse multiple dashes
+        slug = re.sub(r"-{2,}", "-", slug)
+
+        return slug or "unknown-species"
+        
 
     @property
     def scientific_name(self):
