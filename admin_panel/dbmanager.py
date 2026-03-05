@@ -137,7 +137,7 @@ class DatabaseManager:
         qr = qrcode.QRCode(
             version=2,
             error_correction=ERROR_CORRECT_H,
-            box_size=20,  # bigger modules = sharper QR
+            box_size=20,
             border=4,
         )
 
@@ -180,22 +180,35 @@ class DatabaseManager:
         title_size = int(qr_w * 0.12)
         subtitle_size = int(qr_w * 0.06)
 
-        try:
-            font_title = ImageFont.truetype(TITLE_FONT_PATH, title_size)
-        except IOError:
-            print("Fuentes para titulo no encontradas, usando fuente por defecto.")
-            font_title = ImageFont.load_default(title_size)
-
-        try:
-            font_subtitle = ImageFont.truetype(SUBTITLE_FONT_PATH, subtitle_size)
-        except IOError:
-            print("Fuentes para subtitulo no encontradas, usando fuente por defecto.")
-            font_subtitle = ImageFont.load_default(subtitle_size)
-
         dummy_draw = ImageDraw.Draw(qr_img)
 
-        bbox_title = dummy_draw.textbbox((0, 0), common_name, font=font_title)
-        bbox_subtitle = dummy_draw.textbbox((0, 0), scientific_name, font=font_subtitle)
+        max_text_width = int(qr_w * 0.9)
+
+        try:
+            font_title, bbox_title = self.fit_font(
+                dummy_draw,
+                common_name,
+                TITLE_FONT_PATH,
+                max_text_width,
+                title_size
+            )
+        except Exception:
+            print("Fuentes para titulo no encontradas, usando fuente por defecto.")
+            font_title = ImageFont.load_default()
+            bbox_title = dummy_draw.textbbox((0, 0), common_name, font=font_title)
+
+        try:
+            font_subtitle, bbox_subtitle = self.fit_font(
+                dummy_draw,
+                scientific_name,
+                SUBTITLE_FONT_PATH,
+                max_text_width,
+                subtitle_size
+            )
+        except Exception:
+            print("Fuentes para subtitulo no encontradas, usando fuente por defecto.")
+            font_subtitle = ImageFont.load_default()
+            bbox_subtitle = dummy_draw.textbbox((0, 0), scientific_name, font=font_subtitle)
 
         w_title = bbox_title[2] - bbox_title[0]
         h_title = bbox_title[3] - bbox_title[1]
@@ -207,23 +220,33 @@ class DatabaseManager:
 
         text_area_height = h_title + h_subtitle + (padding * 3)
 
-        final_width = int(qr_w)
-        final_height = int(qr_h + text_area_height)
+        final_width = qr_w
+        final_height = qr_h + text_area_height
 
-        final_img = Image.new("RGBA", (final_width, final_height), "white")
+        final_img = Image.new("RGBA", (int(final_width), int(final_height)), "white")
         final_img.paste(qr_img, (0, 0))
 
         draw = ImageDraw.Draw(final_img)
 
-        # Title
         x_title = (final_width - w_title) // 2
-        y_title = qr_h
-        draw.text((x_title, y_title), common_name, fill="#2A9D8F", font=font_title)
+        y_title = qr_h + padding
 
-        # Subtitle
+        draw.text(
+            (x_title, y_title),
+            common_name,
+            fill="#2A9D8F",
+            font=font_title
+        )
+
         x_subtitle = (final_width - w_subtitle) // 2
         y_subtitle = y_title + h_title + padding
-        draw.text((x_subtitle, y_subtitle), scientific_name, fill="#475569", font=font_subtitle)
+
+        draw.text(
+            (x_subtitle, y_subtitle),
+            scientific_name,
+            fill="#475569",
+            font=font_subtitle
+        )
 
         buffer = BytesIO()
         final_img.save(
@@ -238,6 +261,25 @@ class DatabaseManager:
 
         with open(qr_path, "wb") as f:
             f.write(buffer.getvalue())
+
+
+    @staticmethod
+    def fit_font(draw, text, font_path, max_width, start_size, min_size=10):
+        size = start_size
+
+        while size > min_size:
+            font = ImageFont.truetype(font_path, size)
+            bbox = draw.textbbox((0, 0), text, font=font)
+            width = bbox[2] - bbox[0]
+
+            if width <= max_width:
+                return font, bbox
+
+            size -= 2
+
+        font = ImageFont.truetype(font_path, min_size)
+        bbox = draw.textbbox((0, 0), text, font=font)
+        return font, bbox
             
     def generate_pdf(self, species: Species):
         self.pdf_generator.generate(species)
