@@ -1,7 +1,7 @@
 import json
 import os
 from io import BytesIO
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFont
 import qrcode
 from qrcode.constants import ERROR_CORRECT_H
 
@@ -9,6 +9,9 @@ from admin_panel.pdf_generator import PDFGenerator
 from admin_panel.species import Species
 
 LEAF_PATH = os.path.join(os.path.dirname(__file__), "templates", "eco_256.png")
+TITLE_FONT_PATH = os.path.join(os.path.dirname(__file__), "fonts", "Roboto-Bold.ttf")
+SUBTITLE_FONT_PATH = os.path.join(os.path.dirname(__file__), "fonts", "Roboto-Italic.ttf")
+
 
 class DatabaseManager:
     """
@@ -130,12 +133,14 @@ class DatabaseManager:
 
     def generate_qr(self, species: Species):
         full_url = f"{self.deployment_url}{species.pdf_url}"
+
         qr = qrcode.QRCode(
-            version=2,                   # more modules
+            version=2,
             error_correction=ERROR_CORRECT_H,
-            box_size=16,                 # larger module pixels
+            box_size=20,  # bigger modules = sharper QR
             border=4,
-        )   
+        )
+
         qr.add_data(full_url)
         qr.make(fit=True)
 
@@ -144,25 +149,21 @@ class DatabaseManager:
             back_color="white"
         ).get_image().convert("RGBA")
 
-        leaf_path = LEAF_PATH
-
-        if leaf_path and os.path.exists(leaf_path):
-            leaf = Image.open(leaf_path).convert("RGBA")
+        if LEAF_PATH and os.path.exists(LEAF_PATH):
+            leaf = Image.open(LEAF_PATH).convert("RGBA")
 
             qr_w, qr_h = qr_img.size
             icon_size = qr_w // 5
 
             leaf = leaf.resize((icon_size, icon_size), Image.Resampling.LANCZOS)
 
-            bg_size = int(icon_size * 1.25)  # Background slightly bigger than icon
+            bg_size = int(icon_size * 1.25)
             bg = Image.new("RGBA", (bg_size, bg_size), (0, 0, 0, 0))
 
             draw = ImageDraw.Draw(bg)
-            # draw a rectangle with rounded corners
             radius = bg_size // 4
             draw.rounded_rectangle((0, 0, bg_size, bg_size), fill="white", radius=radius)
-            
-            # Paste leaf centered over white background
+
             leaf_x = (bg_size - icon_size) // 2
             leaf_y = (bg_size - icon_size) // 2
             bg.paste(leaf, (leaf_x, leaf_y), leaf)
@@ -171,16 +172,71 @@ class DatabaseManager:
             final_y = (qr_h - bg_size) // 2
             qr_img.paste(bg, (final_x, final_y), bg)
 
+        common_name = species.common_name
+        scientific_name = species.full_scientific_name
+
+        qr_w, qr_h = qr_img.size
+
+        title_size = int(qr_w * 0.12)
+        subtitle_size = int(qr_w * 0.06)
+
+        try:
+            font_title = ImageFont.truetype(TITLE_FONT_PATH, title_size)
+        except IOError:
+            print("Fuentes para titulo no encontradas, usando fuente por defecto.")
+            font_title = ImageFont.load_default(title_size)
+
+        try:
+            font_subtitle = ImageFont.truetype(SUBTITLE_FONT_PATH, subtitle_size)
+        except IOError:
+            print("Fuentes para subtitulo no encontradas, usando fuente por defecto.")
+            font_subtitle = ImageFont.load_default(subtitle_size)
+
+        dummy_draw = ImageDraw.Draw(qr_img)
+
+        bbox_title = dummy_draw.textbbox((0, 0), common_name, font=font_title)
+        bbox_subtitle = dummy_draw.textbbox((0, 0), scientific_name, font=font_subtitle)
+
+        w_title = bbox_title[2] - bbox_title[0]
+        h_title = bbox_title[3] - bbox_title[1]
+
+        w_subtitle = bbox_subtitle[2] - bbox_subtitle[0]
+        h_subtitle = bbox_subtitle[3] - bbox_subtitle[1]
+
+        padding = int(qr_w * 0.05)
+
+        text_area_height = h_title + h_subtitle + (padding * 3)
+
+        final_width = int(qr_w)
+        final_height = int(qr_h + text_area_height)
+
+        final_img = Image.new("RGBA", (final_width, final_height), "white")
+        final_img.paste(qr_img, (0, 0))
+
+        draw = ImageDraw.Draw(final_img)
+
+        # Title
+        x_title = (final_width - w_title) // 2
+        y_title = qr_h
+        draw.text((x_title, y_title), common_name, fill="#2A9D8F", font=font_title)
+
+        # Subtitle
+        x_subtitle = (final_width - w_subtitle) // 2
+        y_subtitle = y_title + h_title + padding
+        draw.text((x_subtitle, y_subtitle), scientific_name, fill="#475569", font=font_subtitle)
+
         buffer = BytesIO()
-        
-        qr_img = qr_img.resize(
-            (qr_img.width * 2, qr_img.height * 2),
-            Image.Resampling.NEAREST # nearest preserves the sharp edges of the QR code when scaling up
+        final_img.save(
+            buffer,
+            format="PNG",
+            dpi=(300, 300),
+            optimize=True,
+            compress_level=1
         )
-        qr_img.save(buffer, format="PNG")
-        
+
         qr_path = os.path.join(self.qr_dir, f"{species.id}.png")
-        with open(qr_path, 'wb') as f:
+
+        with open(qr_path, "wb") as f:
             f.write(buffer.getvalue())
             
     def generate_pdf(self, species: Species):
