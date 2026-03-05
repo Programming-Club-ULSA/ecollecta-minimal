@@ -168,3 +168,12 @@ Para dudas de operación, priorizar issues y PRs en este repo con contexto míni
 - comando ejecutado,
 - error exacto,
 - screenshot/log cuando aplique.
+
+
+## Fuentes Consultadas
+Aca se pueden ver las fuentes que se consultaron para la redacción de las fichas técnicas.
+- https://tropicos.org/
+- http://tiangue-biodiversidad.com
+- https://www.iucnredlist.org
+- https://ticorico.org
+- https://enciclovida.mx
