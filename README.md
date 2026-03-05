@@ -177,3 +177,7 @@ Aca se pueden ver las fuentes que se consultaron para la redacción de las ficha
 - https://www.iucnredlist.org
 - https://ticorico.org
 - https://enciclovida.mx
+- https://www.una.edu.ni
+- https://osa-arboretum.org
+
+En este proyecto nos apegamos al estándar taxonómico filogenético moderno (APG IV), por lo que se pueden encontrar cambios en la clasificación tradicional de algunas especies, por ejemplo: Magnoliopsida ahora es una sub clase, la clase es Equisetopsida. 
