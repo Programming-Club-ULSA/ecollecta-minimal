@@ -218,6 +218,12 @@ export default function SpeciesDetail() {
             <div className="mt-6 grid grid-cols-2 gap-3 text-sm">
               <div className="rounded-2xl border border-slate-200 bg-[#f8fbf8] px-4 py-3">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#140dbd]">
+                  Orden
+                </p>
+                <p className="mt-1 font-medium text-slate-800">{species.taxonomy.order}</p>
+              </div>
+              <div className="rounded-2xl border border-slate-200 bg-[#f8fbf8] px-4 py-3">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#140dbd]">
                   Familia
                 </p>
                 <p className="mt-1 font-medium text-slate-800">{species.taxonomy.family}</p>
@@ -237,35 +243,29 @@ export default function SpeciesDetail() {
                 <p className="mt-1 font-medium text-slate-800">{species.taxonomy.species}</p>
               </div>
 
-              <div className="rounded-2xl border border-slate-200 bg-[#f8fbf8] px-4 py-3">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#140dbd]">
-                  Codigo
-                </p>
-                <p className="mt-1 break-all font-medium text-slate-800">{species.id}</p>
+              {/* CENTERED BUTTONS: col-span-2 is key here */}
+              <div className="col-span-2 mt-4 flex flex-wrap justify-center gap-3">
+                <Button
+                  asChild
+                  className="rounded-full bg-[#238937] px-8 text-white hover:bg-[#1d7130] shadow-lg transition-all"
+                >
+                  <a href={species.pdfUrl} target="_blank" rel="noopener noreferrer">
+                    <Download className="mr-2 h-4 w-4" />
+                    Descargar PDF
+                  </a>
+                </Button>
+
+                <Button
+                  asChild
+                  variant="outline"
+                  className="rounded-full border-[#140dbd]/25 bg-white text-[#140dbd] hover:bg-[#140dbd]/5 px-8 transition-all"
+                >
+                  <Link to="/archive">
+                    <BookOpenText className="mr-2 h-4 w-4" />
+                    Ver archivo
+                  </Link>
+                </Button>
               </div>
-            </div>
-
-            <div className="mt-7 flex flex-wrap gap-3">
-              <Button
-                asChild
-                className="rounded-full bg-[#238937] px-6 text-white hover:bg-[#1d7130]"
-              >
-                <a href={species.pdfUrl} target="_blank" rel="noopener noreferrer">
-                  <Download className="mr-2 h-4 w-4" />
-                  Descargar PDF
-                </a>
-              </Button>
-
-              <Button
-                asChild
-                variant="outline"
-                className="rounded-full border-[#140dbd]/25 bg-white text-[#140dbd] hover:bg-[#140dbd]/5"
-              >
-                <Link to="/archive">
-                  <BookOpenText className="mr-2 h-4 w-4" />
-                  Ver archivo
-                </Link>
-              </Button>
             </div>
           </div>
         </section>
