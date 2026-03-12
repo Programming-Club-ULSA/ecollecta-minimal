@@ -1,3 +1,5 @@
+import base64
+import mimetypes
 import os
 import html
 import time
@@ -50,12 +52,35 @@ class PDFGenerator:
             safe = html.escape(source).replace("\n", "<br>")
             return f"<p>{safe}</p>"
 
+    def _resolve_template_asset_data_uri(self, asset_name: str) -> str:
+        asset_path = os.path.abspath(os.path.join(self.template_dir, asset_name))
+        if not os.path.exists(asset_path):
+            return ""
+
+        mime_type, _ = mimetypes.guess_type(asset_path)
+        if not mime_type and asset_path.lower().endswith(".svg"):
+            mime_type = "image/svg+xml"
+        if not mime_type:
+            mime_type = "application/octet-stream"
+
+        with open(asset_path, "rb") as asset_file:
+            encoded = base64.b64encode(asset_file.read()).decode("ascii")
+
+        return f"data:{mime_type};base64,{encoded}"
+
     def _get_conservation_status_long(self, species: Species) -> str:
         try:
             status = IUCNStatus(species.conservation_status)
             return status.label_es()
         except ValueError:
             return "Not Evaluated"
+        
+    def _get_raw_css(self, asset_name: str) -> str:
+        asset_path = os.path.abspath(os.path.join(self.template_dir, asset_name))
+        if not os.path.exists(asset_path):
+            return ""
+        with open(asset_path, "r", encoding="utf-8") as f:
+            return f.read()
 
     def generate(self, species: Species):
         env = Environment(loader=FileSystemLoader(self.template_dir))
@@ -68,6 +93,7 @@ class PDFGenerator:
         taxonomy = vars(species.taxonomy) if getattr(species, "taxonomy", None) else {}
         html_content = template.render(
             species=species,
+            species_id=species.id,
             taxonomy=taxonomy,
             scientific_name=species.scientific_name,
             full_scientific_name=species.full_scientific_name,
@@ -78,7 +104,9 @@ class PDFGenerator:
             conservation_code=species.conservation_status,
             conservation_status=self._get_conservation_status_long(species),
             image_absolute_path=self._resolve_image_path(species),
+            institutional_logo_src=self._resolve_template_asset_data_uri("full_logo.svg"),
             generation_date=time.strftime("%Y-%m-%d %H:%M:%S"),
+            css_content=self._get_raw_css("styles.css")
         )
 
         # temporal html file is needed because pyhtml2pdf only accepts file paths, not raw HTML strings.

@@ -2,120 +2,140 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { width: 210mm; height: 297mm; margin: 0 auto; background: white; }
-
-        .markdown-content p { margin: 0 0 8px 0; }
-        .markdown-content ul, .markdown-content ol { margin: 0 0 8px 18px; }
-        .markdown-content li { margin-bottom: 3px; }
-
-        .section-title {
-            margin: 14px 0 8px 0;
-            font-weight: 700;
-            color: #14532d;
-            border-bottom: 2px solid #d1d5db;
-            padding-bottom: 4px;
-        }
-
-        .tax-label {
-            font-weight: 600;
-            color: #475569;
-        }
+        {{ css_content | safe }}
     </style>
 </head>
 
-<body class="p-12 font-sans text-slate-800 relative">
+{% set scientific_display = full_scientific_name or scientific_name %}
+{% if conservation_code in ['CR', 'EN'] %}
+    {% set status_theme = 'danger' %}
+    {% set status_note = 'La categoría indica una condición de alto riesgo y demanda atención prioritaria en términos de monitoreo y conservación.' %}
+{% elif conservation_code in ['VU', 'NT'] %}
+    {% set status_theme = 'warning' %}
+    {% set status_note = 'La especie debe mantenerse bajo seguimiento para prevenir un incremento en su nivel de amenaza dentro del entorno local.' %}
+{% else %}
+    {% set status_theme = 'normal' %}
+    {% set status_note = 'La ficha actual no refleja alertas inmediatas de riesgo, aunque la observación institucional sigue siendo relevante.' %}
+{% endif %}
 
-    <header class="border-b-4 border-green-700 pb-6 mb-8">
-
-        <h1 class="text-4xl font-bold text-slate-900 tracking-tight">
-            {{ common_name }}
-        </h1>
-
-        <h2 class="text-2xl mt-2 text-slate-700">
-            <span class="italic">
-                {{ taxonomy.genus }} {{ taxonomy.species }}
-            </span>
-            {% if taxonomy.authority %}
-                <span class="not-italic text-slate-500">
-                    {{ taxonomy.authority }}
-                </span>
-            {% endif %}
-        </h2>
-
-        <div class="mt-4 inline-block bg-green-100 text-green-900 px-4 py-2 rounded-md font-semibold text-sm">
-            IUCN Status: {{ conservation_code }} — {{ conservation_status }}
-        </div>
-
-    </header>
-
-    <div class="w-full h-72 overflow-hidden mb-8 border border-slate-300">
-        <img src="{{ image_absolute_path }}" alt="{{ common_name }}" class="w-full h-full object-cover">
-    </div>
-
-    <main class="grid grid-cols-3 gap-8 mb-24">
-
-        <div class="col-span-2 text-justify text-base leading-relaxed">
-
-            <h3 class="section-title">Descripción e Información</h3>
-            <div class="markdown-content">
-                {{ description_html | safe }}
+<body>
+    <div class="page">
+        <header class="document-header">
+            <div class="header-content">
+                <img src="{{ institutional_logo_src }}" alt="Logo Institucional" class="institutional-logo">
+                <div class="header-text">
+                    <h1>Ficha Institucional de Especie Botánica</h1>
+                </div>
             </div>
+        </header>
 
-        </div>
+        <section class="species-hero">
+            <div class="title-panel avoid-break">
+                <span class="status-pill {{ status_theme }}">{{ conservation_code }} · {{ conservation_status }}</span>
 
-        <aside class="bg-slate-50 p-6 border border-slate-200 text-sm h-fit">
+                <h1>{{ common_name }}</h1>
 
-            <h3 class="font-bold text-slate-800 mb-4">Clasificación Taxonómica</h3>
+                <p class="scientific-name">{{ scientific_display }}</p>
 
-            <ul class="space-y-2">
-                <li><span class="tax-label">Reino:</span> {{ taxonomy.kingdom }}</li>
-                <li><span class="tax-label">Filo / División:</span> {{ taxonomy.phylum }}</li>
-                <li><span class="tax-label">Clase:</span> {{ taxonomy.class_ }}</li>
-                <li><span class="tax-label">Orden:</span> {{ taxonomy.order }}</li>
-                <li><span class="tax-label">Familia:</span> {{ taxonomy.family }}</li>
-                <li><span class="tax-label">Género:</span> {{ taxonomy.genus }}</li>
-                <li><span class="tax-label">Especie:</span> {{ taxonomy.species }}</li>
-                {% if taxonomy.authority %}
-                <li><span class="tax-label">Autoridad:</span> {{ taxonomy.authority }}</li>
-                {% endif %}
-            </ul>
-
-            <div class="mt-6">
-                <h4 class="font-bold text-slate-800 mb-2">Estado de Conservación</h4>
-                <p>
-                    Categoría oficial según la Lista Roja de la IUCN:
-                </p>
-                <p class="font-semibold mt-1">
-                    {{ conservation_code }} — {{ conservation_status }}
+                <p class="title-summary">
+                    Registro institucional orientado a la divulgación científica, la educación ambiental y la conservación del patrimonio natural universitario.
                 </p>
             </div>
 
-        </aside>
+            <div class="image-panel avoid-break">
+                <img src="{{ image_absolute_path }}" alt="{{ common_name }}">
+            </div>
+        </section>
 
-    </main>
+        <main class="content-grid">
+            <section class="content-panel">
+                <p class="panel-kicker">Descripción</p>
+                <h2 class="panel-title">Información botánica</h2>
 
-    <footer class="border-t border-slate-300 text-xs text-slate-600 py-4 mt-12 w-full">
-        <div class="flex justify-between">
+                <div class="markdown-content">
+                    {{ description_html | safe }}
+                </div>
+            </section>
 
-            <div class="w-2/3">
+            <aside class="sidebar-stack">
+                <section class="content-panel avoid-break">
+                    <p class="panel-kicker">Taxonomía</p>
+                    <h3 class="panel-title">Clasificación científica</h3>
+
+                    <div class="taxonomy-list">
+                        <div class="taxonomy-item">
+                            <span class="taxonomy-label">Reino</span>
+                            <span class="taxonomy-value">{{ taxonomy.kingdom }}</span>
+                        </div>
+                        <div class="taxonomy-item">
+                            <span class="taxonomy-label">Filo / División</span>
+                            <span class="taxonomy-value">{{ taxonomy.phylum }}</span>
+                        </div>
+                        <div class="taxonomy-item">
+                            <span class="taxonomy-label">Clase</span>
+                            <span class="taxonomy-value">{{ taxonomy.class_ }}</span>
+                        </div>
+                        <div class="taxonomy-item">
+                            <span class="taxonomy-label">Orden</span>
+                            <span class="taxonomy-value">{{ taxonomy.order }}</span>
+                        </div>
+                        <div class="taxonomy-item">
+                            <span class="taxonomy-label">Familia</span>
+                            <span class="taxonomy-value">{{ taxonomy.family }}</span>
+                        </div>
+                        <div class="taxonomy-item">
+                            <span class="taxonomy-label">Género</span>
+                            <span class="taxonomy-value">{{ taxonomy.genus }}</span>
+                        </div>
+                        <div class="taxonomy-item">
+                            <span class="taxonomy-label">Especie</span>
+                            <span class="taxonomy-value">{{ taxonomy.species }}</span>
+                        </div>
+                        {% if taxonomy.authority %}
+                        <div class="taxonomy-item">
+                            <span class="taxonomy-label">Autoridad</span>
+                            <span class="taxonomy-value">{{ taxonomy.authority }}</span>
+                        </div>
+                        {% endif %}
+                    </div>
+                </section>
+
+                <section class="content-panel avoid-break">
+                    <p class="panel-kicker">Conservación</p>
+                    <h3 class="panel-title">Referencia IUCN</h3>
+
+                    <div class="status-block {{ status_theme }}" style="margin-top: 5mm;">
+                        <p class="status-title">{{ conservation_code }} — {{ conservation_status }}</p>
+                        <p class="status-text">
+                            Categoría interpretada según la Lista Roja de la IUCN y utilizada como referencia para esta ficha institucional.
+                        </p>
+                    </div>
+
+                    <p class="support-text">
+                        Este documento promueve el conocimiento científico y la educación ambiental dentro del campus, fortaleciendo la conservación del patrimonio botánico universitario.
+                    </p>
+                </section>
+            </aside>
+        </main>
+
+        <footer class="document-footer">
+            <div class="footer-note">
                 <p>
                     Clasificación taxonómica basada en el sistema de nomenclatura binomial establecido por 
                     Carl Linnaeus y regulado por los Códigos Internacionales de Nomenclatura (ICN / ICZN).
                 </p>
-                <p class="mt-1">
+                <p>
                     El estado de conservación sigue las Categorías y Criterios de la Lista Roja de la IUCN, Versión 3.1.
                 </p>
             </div>
 
-            <div class="text-right w-1/3">
+            <div class="footer-stamp">
+                <p class="footer-brand">Universidad Tecnológica La Salle</p>
                 <p>Documento generado/actualizado</p>
                 <p>{{ generation_date }}</p>
             </div>
-
-        </div>
-    </footer>
-
+        </footer>
+    </div>
 </body>
 </html>
