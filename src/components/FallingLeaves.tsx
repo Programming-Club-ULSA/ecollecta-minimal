@@ -15,7 +15,7 @@ export function FallingLeaves() {
   const [leaves, setLeaves] = useState<LeafConfig[]>([]);
 
   useEffect(() => {
-    const count = window.innerWidth > 768 ? 8 : 0;
+    const count = window.innerWidth > 768 ? 10 : 5;
     const generatedLeaves = Array.from({ length: count }, (_, id) => ({
       id,
       left: `${Math.random() * 100}%`,

@@ -5,75 +5,342 @@ import type { Species } from "@/types/species";
 import { Button } from "@/components/ui/button";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { ArrowLeft, BookOpenText } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  BookOpenText,
+  Download,
+  Leaf,
+} from "lucide-react";
 import { FallingLeaves } from "@/components/FallingLeaves";
+import fullLogo from "@/assets/full_logo.svg";
+
+function getStatusMeta(status: string) {
+  if (status === "CR") {
+    return {
+      label: "Critica",
+      chipClassName: "bg-red-600 text-white",
+      panelClassName: "border-red-200 bg-red-50 text-red-700",
+      description: "Requiere atencion inmediata por su alto nivel de riesgo.",
+    };
+  }
+
+  if (status === "EN") {
+    return {
+      label: "En Peligro",
+      chipClassName: "bg-red-500 text-white",
+      panelClassName: "border-red-200 bg-red-50 text-red-700",
+      description: "Presenta riesgo alto y necesita acciones de conservacion.",
+    };
+  }
+
+  if (status === "VU") {
+    return {
+      label: "Vulnerable",
+      chipClassName: "bg-[#ffb13c] text-slate-900",
+      panelClassName: "border-[#ffb13c]/35 bg-[#ffb13c]/12 text-[#8a5a00]",
+      description: "Debe monitorearse para evitar un aumento en su nivel de amenaza.",
+    };
+  }
+
+  if (status === "NT") {
+    return {
+      label: "Casi Amenazada",
+      chipClassName: "bg-[#ffcf70] text-slate-900",
+      panelClassName: "border-[#ffcf70]/35 bg-[#ffcf70]/12 text-[#8a5a00]",
+      description: "Se encuentra cercana a categorias de mayor riesgo.",
+    };
+  }
+
+  return {
+    label: "Normal",
+    chipClassName: "bg-[#30b778] text-white",
+    panelClassName: "border-[#30b778]/30 bg-[#30b778]/10 text-[#1e6d49]",
+    description: "Se mantiene sin alertas inmediatas dentro del archivo actual.",
+  };
+}
 
 export default function SpeciesDetail() {
   const { id } = useParams();
   const [species, setSpecies] = useState<Species | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     getAllSpecies().then((data) => {
       const found = data.find((s) => s.id === id);
       setSpecies(found || null);
+      setIsLoading(false);
     });
   }, [id]);
 
-  if (!species)
-    return <div className="p-10 text-center">Cargando ficha botánica...</div>;
+  if (isLoading) {
+    return (
+      <div
+        className="flex min-h-screen items-center justify-center bg-[#f5f8f6] px-6 text-slate-700"
+        style={{
+          fontFamily: '"Jost", "Segoe UI", "Helvetica Neue", sans-serif',
+        }}
+      >
+        Cargando ficha botanica...
+      </div>
+    );
+  }
+
+  if (!species) {
+    return (
+      <div
+        className="flex min-h-screen items-center justify-center bg-[#f5f8f6] px-6"
+        style={{
+          fontFamily: '"Jost", "Segoe UI", "Helvetica Neue", sans-serif',
+        }}
+      >
+        <div className="w-full max-w-xl rounded-3xl border border-[#238937]/18 bg-white/92 px-8 py-12 text-center shadow-[0_24px_50px_-35px_rgba(35,137,55,0.5)]">
+          <h1 className="text-3xl font-bold text-slate-900">Especie no encontrada</h1>
+          <p className="mt-3 text-slate-600">
+            La ficha que intentas abrir no esta disponible en el archivo actual.
+          </p>
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            <Button asChild className="rounded-full bg-[#238937] px-6 text-white hover:bg-[#1d7130]">
+              <Link to="/archive">Volver al archivo</Link>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              className="rounded-full border-[#140dbd]/25 bg-white text-[#140dbd] hover:bg-[#140dbd]/5"
+            >
+              <Link to="/">Ir al inicio</Link>
+            </Button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  const statusMeta = getStatusMeta(species.conservationStatus);
+  const taxonomyItems = [
+    ["Reino", species.taxonomy.kingdom],
+    ["Filo", species.taxonomy.phylum],
+    ["Clase", species.taxonomy.class_],
+    ["Orden", species.taxonomy.order],
+    ["Familia", species.taxonomy.family],
+    ["Genero", species.taxonomy.genus],
+    ["Especie", species.taxonomy.species],
+    ["Autoridad", species.taxonomy.authority || "No especificada"],
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white font-sans relative">
+    <div
+      className="relative min-h-screen overflow-x-hidden bg-[#f5f8f6] text-slate-900"
+      style={{
+        fontFamily: '"Jost", "Segoe UI", "Helvetica Neue", sans-serif',
+      }}
+    >
       <FallingLeaves />
 
-      <header className="relative z-20 bg-white/90 border-b border-slate-200 sticky top-0 backdrop-blur">
-        <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between gap-3">
-          <Button asChild variant="ghost" className="text-slate-700 hover:text-green-700 -ml-3">
-            <Link to="/">
-              <ArrowLeft className="mr-2 h-4 w-4" /> Volver al inicio
+      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute -left-28 top-[-140px] h-[340px] w-[340px] rounded-full bg-[#238937]/20 blur-3xl" />
+        <div className="absolute right-[-80px] top-[100px] h-[300px] w-[300px] rounded-full bg-[#140dbd]/16 blur-3xl" />
+        <div className="absolute bottom-[-140px] left-1/2 h-[320px] w-[320px] -translate-x-1/2 rounded-full bg-[#ffb13c]/18 blur-3xl" />
+      </div>
+
+      <section className="relative z-10 mx-auto max-w-6xl px-6 pb-10 pt-16">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <Button
+            asChild
+            variant="ghost"
+            className="-ml-3 rounded-full px-4 text-slate-700 hover:bg-white/70 hover:text-[#238937]"
+          >
+            <Link to="/archive">
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Volver al archivo
             </Link>
           </Button>
-          <Button asChild variant="outline" className="border-green-200 text-green-700 hover:bg-green-50">
-            <Link to="/archive">Archivo de especies</Link>
+
+          <Button
+            asChild
+            variant="outline"
+            className="rounded-full border-[#140dbd]/25 bg-white/85 text-[#140dbd] hover:bg-[#140dbd]/5"
+          >
+            <Link to="/">
+              Ir al inicio
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
           </Button>
         </div>
-      </header>
 
-      <main className="relative z-10 max-w-5xl mx-auto px-6 py-12">
-        <article className="rounded-2xl border border-slate-200 bg-white/95 shadow-sm overflow-hidden">
+        <div className="mt-8 text-center">
           <img
-            src={species.imageUrl}
-            alt={species.commonName}
-            className="w-full h-80 md:h-96 object-cover"
+            src={fullLogo}
+            alt="Universidad Tecnologica La Salle"
+            className="mx-auto h-14 w-auto md:h-16"
           />
+        </div>
+      </section>
 
-          <div className="p-6 md:p-10">
-            <p className="text-xs uppercase tracking-widest text-green-700 font-semibold mb-3">
-              Ficha botánica oficial
-            </p>
+      <main className="relative z-10 mx-auto max-w-6xl px-6 pb-20">
+        <section className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+          <div className="overflow-hidden rounded-3xl border border-[#238937]/18 bg-white shadow-[0_24px_55px_-35px_rgba(15,23,42,0.45)]">
+            <img
+              src={species.imageUrl}
+              alt={species.commonName}
+              className="h-80 w-full object-cover md:h-[28rem]"
+            />
+          </div>
 
-            <h1 className="text-4xl font-bold text-slate-900 mb-2">{species.commonName}</h1>
-
-            <p className="italic text-lg text-slate-600 mb-6">{species.scientificName}</p>
-
-            <div className="mb-8 inline-flex items-center gap-2 rounded-full bg-red-50 text-red-700 px-3 py-1.5 text-sm font-semibold">
-              Estado de Conservación: {species.conservationStatus}
+          <div className="rounded-3xl border border-[#238937]/18 bg-white/95 p-7 shadow-[0_24px_55px_-35px_rgba(20,13,189,0.38)] backdrop-blur-sm md:p-8">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#238937]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-[#238937]">
+              <Leaf className="h-4 w-4" />
+              Ficha botanica oficial
             </div>
 
-            <div className="prose prose-slate prose-headings:text-slate-800 prose-a:text-green-700 max-w-none mb-10">
+            <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
+              {species.commonName}
+            </h1>
+
+            <p className="mt-3 text-lg italic text-slate-600">{species.fullScientificName}</p>
+
+            <div
+              className={`mt-6 rounded-2xl border px-4 py-4 ${statusMeta.panelClassName}`}
+            >
+              <div className="flex flex-wrap items-center gap-3">
+                <span
+                  className={`status-chip inline-flex rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] shadow-md ${statusMeta.chipClassName}`}
+                >
+                  {statusMeta.label}
+                </span>
+                <span className="text-sm font-semibold">
+                  Estado de conservacion: {species.conservationStatus}
+                </span>
+              </div>
+              <p className="mt-2 text-sm leading-relaxed opacity-90">{statusMeta.description}</p>
+            </div>
+
+            <div className="mt-6 grid grid-cols-2 gap-3 text-sm">
+              <div className="rounded-2xl border border-slate-200 bg-[#f8fbf8] px-4 py-3">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#140dbd]">
+                  Familia
+                </p>
+                <p className="mt-1 font-medium text-slate-800">{species.taxonomy.family}</p>
+              </div>
+
+              <div className="rounded-2xl border border-slate-200 bg-[#f8fbf8] px-4 py-3">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#140dbd]">
+                  Genero
+                </p>
+                <p className="mt-1 font-medium text-slate-800">{species.taxonomy.genus}</p>
+              </div>
+
+              <div className="rounded-2xl border border-slate-200 bg-[#f8fbf8] px-4 py-3">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#140dbd]">
+                  Especie
+                </p>
+                <p className="mt-1 font-medium text-slate-800">{species.taxonomy.species}</p>
+              </div>
+
+              <div className="rounded-2xl border border-slate-200 bg-[#f8fbf8] px-4 py-3">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#140dbd]">
+                  Codigo
+                </p>
+                <p className="mt-1 break-all font-medium text-slate-800">{species.id}</p>
+              </div>
+            </div>
+
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Button
+                asChild
+                className="rounded-full bg-[#238937] px-6 text-white hover:bg-[#1d7130]"
+              >
+                <a href={species.pdfUrl} target="_blank" rel="noopener noreferrer">
+                  <Download className="mr-2 h-4 w-4" />
+                  Descargar PDF
+                </a>
+              </Button>
+
+              <Button
+                asChild
+                variant="outline"
+                className="rounded-full border-[#140dbd]/25 bg-white text-[#140dbd] hover:bg-[#140dbd]/5"
+              >
+                <Link to="/archive">
+                  <BookOpenText className="mr-2 h-4 w-4" />
+                  Ver archivo
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-8 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+          <article className="rounded-3xl border border-[#238937]/18 bg-white/95 p-7 shadow-[0_24px_55px_-35px_rgba(35,137,55,0.4)] md:p-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#140dbd]">
+              Descripcion
+            </p>
+            <h2 className="mt-2 text-3xl font-bold text-slate-900">Perfil botanico</h2>
+
+            <div className="prose prose-slate prose-headings:text-slate-900 prose-a:text-[#238937] prose-strong:text-slate-900 mt-6 max-w-none">
               <ReactMarkdown remarkPlugins={[remarkGfm]}>
                 {species.description}
               </ReactMarkdown>
             </div>
+          </article>
 
-            <Button asChild className="bg-green-600 hover:bg-green-700 text-white">
-              <a href={species.pdfUrl} target="_blank" rel="noopener noreferrer">
-                <BookOpenText className="mr-2 h-4 w-4" />
-                Descargar Ficha Científica (PDF)
-              </a>
-            </Button>
-          </div>
-        </article>
+          <aside className="space-y-6">
+            <div className="rounded-3xl border border-[#140dbd]/18 bg-white/95 p-7 shadow-[0_24px_55px_-35px_rgba(20,13,189,0.35)] md:p-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#140dbd]">
+                Taxonomia
+              </p>
+              <h3 className="mt-2 text-2xl font-bold text-slate-900">Clasificacion cientifica</h3>
+
+              <div className="mt-6 space-y-3">
+                {taxonomyItems.map(([label, value]) => (
+                  <div
+                    key={label}
+                    className="flex items-start justify-between gap-4 rounded-2xl border border-slate-200 bg-[#f8f8ff] px-4 py-3"
+                  >
+                    <span className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#140dbd]">
+                      {label}
+                    </span>
+                    <span className="text-right text-sm font-medium text-slate-800">{value}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-3xl border border-[#238937]/18 bg-white/95 p-7 shadow-[0_24px_55px_-35px_rgba(35,137,55,0.35)] md:p-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#140dbd]">
+                Consulta rapida
+              </p>
+              <h3 className="mt-2 text-2xl font-bold text-slate-900">Acciones disponibles</h3>
+              <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                Descarga la ficha cientifica o regresa al archivo para continuar
+                explorando otras especies del campus.
+              </p>
+
+              <div className="mt-6 flex flex-col gap-3">
+                <Button
+                  asChild
+                  className="rounded-full bg-[#238937] text-white hover:bg-[#1d7130]"
+                >
+                  <a href={species.pdfUrl} target="_blank" rel="noopener noreferrer">
+                    <Download className="mr-2 h-4 w-4" />
+                    Descargar ficha cientifica
+                  </a>
+                </Button>
+
+                <Button
+                  asChild
+                  variant="outline"
+                  className="rounded-full border-[#140dbd]/25 bg-white text-[#140dbd] hover:bg-[#140dbd]/5"
+                >
+                  <Link to="/archive">
+                    Continuar en el archivo
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </aside>
+        </section>
       </main>
     </div>
   );
