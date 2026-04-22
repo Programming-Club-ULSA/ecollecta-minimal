@@ -18,10 +18,10 @@ import fullLogo from "@/assets/full_logo.svg";
 function getStatusMeta(status: string) {
   if (status === "CR") {
     return {
-      label: "Critica",
+      label: "Crítica",
       chipClassName: "bg-red-600 text-white",
       panelClassName: "border-red-200 bg-red-50 text-red-700",
-      description: "Requiere atencion inmediata por su alto nivel de riesgo.",
+      description: "Requiere atención inmediata por su alto nivel de riesgo.",
     };
   }
 
@@ -30,7 +30,7 @@ function getStatusMeta(status: string) {
       label: "En Peligro",
       chipClassName: "bg-red-500 text-white",
       panelClassName: "border-red-200 bg-red-50 text-red-700",
-      description: "Presenta riesgo alto y necesita acciones de conservacion.",
+      description: "Presenta riesgo alto y necesita acciones de conservación.",
     };
   }
 
@@ -48,7 +48,7 @@ function getStatusMeta(status: string) {
       label: "Casi Amenazada",
       chipClassName: "bg-[#ffcf70] text-slate-900",
       panelClassName: "border-[#ffcf70]/35 bg-[#ffcf70]/12 text-[#8a5a00]",
-      description: "Se encuentra cercana a categorias de mayor riesgo.",
+      description: "Se encuentra cercana a categorías de mayor riesgo.",
     };
   }
 
@@ -81,7 +81,7 @@ export default function SpeciesDetail() {
           fontFamily: '"Jost", "Segoe UI", "Helvetica Neue", sans-serif',
         }}
       >
-        Cargando ficha botanica...
+        Cargando ficha botánica...
       </div>
     );
   }
@@ -97,7 +97,7 @@ export default function SpeciesDetail() {
         <div className="w-full max-w-xl rounded-3xl border border-primary/18 bg-white/92 px-8 py-12 text-center shadow-[0_24px_50px_-35px_rgba(35,137,53,0.5)]">
           <h1 className="text-3xl font-bold text-slate-900">Especie no encontrada</h1>
           <p className="mt-3 text-slate-600">
-            La ficha que intentas abrir no esta disponible en el archivo actual.
+            La ficha que intentas abrir no está disponible en el archivo actual.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             <Button asChild className="rounded-full bg-primary px-6 text-white hover:bg-primary/90">
@@ -123,7 +123,7 @@ export default function SpeciesDetail() {
     ["Clase", species.taxonomy.class_],
     ["Orden", species.taxonomy.order],
     ["Familia", species.taxonomy.family],
-    ["Genero", species.taxonomy.genus],
+    ["Género", species.taxonomy.genus],
     ["Especie", species.taxonomy.species],
     ["Autoridad", species.taxonomy.authority || "No especificada"],
   ];
@@ -190,7 +190,7 @@ export default function SpeciesDetail() {
           <div className="rounded-3xl border border-primary/18 bg-white/95 p-7 shadow-[0_24px_55px_-35px_rgba(20,13,189,0.38)] backdrop-blur-sm md:p-8">
             <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
               <Leaf className="h-4 w-4" />
-              Ficha botanica oficial
+              Ficha botánica oficial
             </div>
 
             <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
@@ -209,7 +209,7 @@ export default function SpeciesDetail() {
                   {statusMeta.label}
                 </span>
                 <span className="text-sm font-semibold">
-                  Estado de conservacion: {species.conservationStatus}
+                  Estado de conservación: {species.conservationStatus}
                 </span>
               </div>
               <p className="mt-2 text-sm leading-relaxed opacity-90">{statusMeta.description}</p>
@@ -231,7 +231,7 @@ export default function SpeciesDetail() {
 
               <div className="rounded-2xl border border-slate-200 bg-[#f8fbf8] px-4 py-3">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#140dbd]">
-                  Genero
+                  Género
                 </p>
                 <p className="mt-1 font-medium text-slate-800">{species.taxonomy.genus}</p>
               </div>
@@ -272,10 +272,10 @@ export default function SpeciesDetail() {
 
         <section className="mt-8 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
           <article className="rounded-3xl border border-primary/18 bg-white/95 p-7 shadow-[0_24px_55px_-35px_rgba(35,137,53,0.4)] md:p-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#140dbd]">
-              Descripcion
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#140dbd]">
+              Descripción
             </p>
-            <h2 className="mt-2 text-3xl font-bold text-slate-900">Perfil botanico</h2>
+            <h2 className="mt-2 text-3xl font-bold text-slate-900">Perfil botánico</h2>
 
             <div className="prose prose-slate prose-headings:text-slate-900 prose-a:text-primary prose-strong:text-slate-900 mt-6 max-w-none">
               <ReactMarkdown remarkPlugins={[remarkGfm]}>
@@ -287,9 +287,9 @@ export default function SpeciesDetail() {
           <aside className="space-y-6">
             <div className="rounded-3xl border border-[#140dbd]/18 bg-white/95 p-7 shadow-[0_24px_55px_-35px_rgba(20,13,189,0.35)] md:p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#140dbd]">
-                Taxonomia
+                Taxonomía
               </p>
-              <h3 className="mt-2 text-2xl font-bold text-slate-900">Clasificacion cientifica</h3>
+              <h3 className="mt-2 text-2xl font-bold text-slate-900">Clasificación científica</h3>
 
               <div className="mt-6 space-y-3">
                 {taxonomyItems.map(([label, value]) => (
@@ -308,11 +308,11 @@ export default function SpeciesDetail() {
 
             <div className="rounded-3xl border border-primary/18 bg-white/95 p-7 shadow-[0_24px_55px_-35px_rgba(35,137,53,0.35)] md:p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#140dbd]">
-                Consulta rapida
+                Consulta rápida
               </p>
               <h3 className="mt-2 text-2xl font-bold text-slate-900">Acciones disponibles</h3>
               <p className="mt-3 text-sm leading-relaxed text-slate-600">
-                Descarga la ficha cientifica o regresa al archivo para continuar
+                Descarga la ficha científica o regresa al archivo para continuar
                 explorando otras especies del campus.
               </p>
 
@@ -323,7 +323,7 @@ export default function SpeciesDetail() {
                 >
                   <a href={species.pdfUrl} target="_blank" rel="noopener noreferrer">
                     <Download className="mr-2 h-4 w-4" />
-                    Descargar ficha cientifica
+                    Descargar ficha científica
                   </a>
                 </Button>
 

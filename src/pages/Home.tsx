@@ -31,19 +31,19 @@ const lasallianValues = [
   {
     title: "Fe",
     description:
-      "Promovemos una mirada humanista que reconoce el valor de la naturaleza como parte de la creacion.",
+      "Promovemos una mirada humanista que reconoce el valor de la naturaleza como parte de la creación.",
     icon: Landmark,
   },
   {
     title: "Fraternidad",
     description:
-      "La comunidad universitaria aprende y protege su patrimonio biologico mediante colaboracion y respeto.",
+      "La comunidad universitaria aprende y protege su patrimonio biológico mediante colaboración y respeto.",
     icon: GraduationCap,
   },
   {
     title: "Servicio",
     description:
-      "Convertimos el conocimiento botanico en acciones de educacion ambiental para toda la comunidad.",
+      "Convertimos el conocimiento botánico en acciones de educación ambiental para toda la comunidad.",
     icon: ShieldCheck,
   },
 ];
@@ -52,33 +52,33 @@ const institutionalHighlights = [
   {
     title: "Compromiso Ambiental",
     description:
-      "Integramos ciencia, tecnologia y conciencia ecologica para proteger el patrimonio natural del campus.",
+      "Integramos ciencia, tecnología y conciencia ecológica para proteger el patrimonio natural del campus.",
     icon: Leaf,
   },
   {
-    title: "Educacion Transformadora",
+    title: "Educación Transformadora",
     description:
-      "Cada ficha digital conecta a estudiantes y visitantes con informacion valida y practicas responsables.",
+      "Cada ficha digital conecta a estudiantes y visitantes con información válida y prácticas responsables.",
     icon: BookOpen,
   },
   {
-    title: "Innovacion con Identidad",
+    title: "Innovación con Identidad",
     description:
-      "Aplicamos herramientas digitales desde una vision lasallista orientada al desarrollo social sustentable.",
+      "Aplicamos herramientas digitales desde una visión lasallista orientada al desarrollo social sustentable.",
     icon: QrCode,
   },
 ];
 
 const qrSteps = [
   "Ubica el codigo QR en la especie dentro del campus.",
-  "Escanealo con tu celular para abrir su ficha botanica digital.",
-  "Explora informacion cientifica, imagenes y estado de conservacion.",
+  "Escanéalo con tu celular para abrir su ficha botánica digital.",
+  "Explora información científica, imágenes y estado de conservación.",
 ];
 
 function getStatusStyle(status: IUCNStatus): StatusStyle {
   if (status === "CR") {
     return {
-      label: "Critica",
+      label: "Crítica",
       chipClassName: "bg-red-600 text-white",
     };
   }
@@ -155,7 +155,7 @@ function Home() {
         </div>
 
         <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-700 md:text-lg">
-          Explora el patrimonio botanico del campus escaneando los codigos QR en
+          Explora el patrimonio botánico del campus escaneando los códigos QR en
           cada especie.
         </p>
 
@@ -165,7 +165,7 @@ function Home() {
             onClick={() => scrollToSection("qr-info")}
           >
             <QrCode className="mr-1 h-4 w-4" />
-            Como Escanear
+            Cómo Escanear
           </Button>
 
           <Button
@@ -206,10 +206,10 @@ function Home() {
         <div className="mb-6 flex items-end justify-between gap-4">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#140dbd]">
-              Proposito
+              Propósito
             </p>
             <h3 className="mt-2 text-3xl font-bold text-slate-900">
-              Educacion ambiental con impacto real
+              Educación ambiental con impacto real
             </h3>
           </div>
         </div>
@@ -247,7 +247,7 @@ function Home() {
           </p>
 
           <h3 className="mx-auto mt-3 max-w-2xl text-center text-3xl font-bold text-slate-900">
-            Fe, Fraternidad y Servicio como base de la cultura ecologica universitaria
+            Fe, Fraternidad y Servicio como base de la cultura ecológica universitaria
           </h3>
 
           <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-3">
@@ -293,7 +293,7 @@ function Home() {
             className="rounded-full border-primary/30 bg-white text-primary hover:bg-primary/5"
           >
             <Link to="/archive">
-              Ver Coleccion Completa
+              Ver Colección Completa
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
@@ -355,15 +355,15 @@ function Home() {
           </h3>
 
           <p className="mx-auto mt-4 max-w-3xl leading-relaxed text-white/90">
-            La biodiversidad mantiene el equilibrio ecologico del campus. Cada
+            La biodiversidad mantiene el equilibrio ecológico del campus. Cada
             especie documentada representa una oportunidad para investigar,
-            aprender y actuar en favor de una sociedad mas sostenible.
+            aprender y actuar en favor de una sociedad más sostenible.
           </p>
 
           <p className="mx-auto mt-4 max-w-3xl leading-relaxed text-white/90">
-            Preservar este patrimonio fortalece la educacion ambiental y proyecta
-            el compromiso institucional de ULSA con el desarrollo cientifico,
-            tecnologico y humano.
+            Preservar este patrimonio fortalece la educación ambiental y proyecta
+            el compromiso institucional de ULSA con el desarrollo científico,
+            tecnológico y humano.
           </p>
         </div>
       </section>
@@ -378,7 +378,7 @@ function Home() {
           </p>
 
           <h3 className="mt-3 text-center text-2xl font-bold text-slate-900 md:text-3xl">
-            Como funciona el sistema QR
+            Cómo funciona el sistema QR
           </h3>
 
           <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
@@ -401,7 +401,7 @@ function Home() {
               className="h-11 rounded-full bg-primary px-7 text-white hover:bg-primary/90"
             >
               <Link to="/archive">
-                Iniciar Recorrido Botanico
+                Iniciar Recorrido Botánico
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
@@ -411,12 +411,15 @@ function Home() {
 
       <footer className="relative z-10 border-t border-primary/15 bg-white/80">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-6 py-8 text-center sm:flex-row sm:text-left">
-          <p className="text-sm font-semibold text-primary">
-            Club de Programacion ULSA | Ecollecta ULSA
+          <p className="text-xs font-medium text-slate-500">
+            Club de Programación ULSA | Ecollecta ULSA
+          </p>
+          <p className="text-xs text-slate-400">
+            Hecho con amor universitario por Juan Sobalvarro!
           </p>
 
-          <p className="text-sm text-slate-600">
-            © {new Date().getFullYear()} Universidad Tecnologica La Salle, Nicaragua
+          <p className="text-xs text-slate-500">
+            © {new Date().getFullYear()} Universidad Tecnológica La Salle, Nicaragua
           </p>
         </div>
       </footer>

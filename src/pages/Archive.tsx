@@ -18,7 +18,7 @@ import fullLogo from "@/assets/full_logo.svg";
 function getStatusMeta(status: string) {
   if (status === "CR") {
     return {
-      label: "Critica",
+      label: "Crítica",
       chipClassName: "bg-red-600 text-white",
     };
   }
@@ -109,7 +109,7 @@ export default function Archive() {
         <div className="mt-8 text-center">
           <img
             src={fullLogo}
-            alt="Universidad Tecnologica La Salle"
+            alt="Universidad Tecnológica La Salle"
             className="mx-auto h-14 w-auto md:h-16"
           />
 
@@ -118,13 +118,13 @@ export default function Archive() {
               <Leaf className="h-6 w-6" />
             </span>
             <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
-              Archivo Botanico
+              Archivo Botánico
             </h1>
           </div>
 
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-700 md:text-lg">
             Consulta las especies documentadas del campus y accede a sus fichas
-            digitales con informacion cientifica validada.
+            digitales con información científica validada.
           </p>
 
           <div className="mx-auto mt-8 grid max-w-3xl grid-cols-1 gap-3 sm:grid-cols-3">
@@ -147,7 +147,7 @@ export default function Archive() {
                 {isFiltering ? "Activa" : "Libre"}
               </p>
               <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-600">
-                Busqueda
+                Búsqueda
               </p>
             </div>
           </div>
@@ -160,7 +160,7 @@ export default function Archive() {
 
               <input
                 type="text"
-                placeholder="Buscar por nombre comun o cientifico..."
+                placeholder="Buscar por nombre común o científico..."
                 className="block w-full rounded-2xl border border-slate-200 bg-[#f8fbf8] py-3 pl-11 pr-12 text-sm text-slate-700 placeholder-slate-400 outline-none transition focus:border-primary/35 focus:ring-2 focus:ring-primary/15"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
@@ -171,7 +171,7 @@ export default function Archive() {
                   type="button"
                   onClick={() => setSearchTerm("")}
                   className="absolute inset-y-0 right-0 flex items-center pr-4 text-slate-400 transition hover:text-slate-700"
-                  aria-label="Limpiar busqueda"
+                  aria-label="Limpiar búsqueda"
                 >
                   <X className="h-4 w-4" />
                 </button>
@@ -185,9 +185,9 @@ export default function Archive() {
         <section className="mb-10 flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#140dbd]">
-              Exploracion
+              Exploración
             </p>
-            <h2 className="mt-2 text-3xl font-bold text-slate-900">Coleccion de especies</h2>
+            <h2 className="mt-2 text-3xl font-bold text-slate-900">Colección de especies</h2>
           </div>
 
           <p className="text-sm text-slate-600">
@@ -207,13 +207,13 @@ export default function Archive() {
             </h3>
             <p className="mx-auto mt-3 max-w-xl text-slate-600">
               No hay coincidencias para "{searchTerm}". Intenta con otro nombre o
-              limpia la busqueda para ver el archivo completo.
+              limpia la búsqueda para ver el archivo completo.
             </p>
             <Button
               onClick={() => setSearchTerm("")}
               className="mt-6 rounded-full bg-primary px-6 text-white hover:bg-primary/90"
             >
-              Limpiar busqueda
+              Limpiar búsqueda
             </Button>
           </div>
         ) : (
@@ -250,7 +250,7 @@ export default function Archive() {
                     <div className="grid grid-cols-2 gap-3 text-sm text-slate-600">
                       <div className="rounded-2xl border border-slate-200 bg-[#f8fbf8] px-4 py-3">
                         <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#140dbd]">
-                          Genero
+                          Género
                         </p>
                         <p className="mt-1 font-medium text-slate-800">{tree.taxonomy.genus}</p>
                       </div>
