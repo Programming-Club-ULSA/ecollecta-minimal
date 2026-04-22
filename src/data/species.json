@@ -17,8 +17,8 @@
       "scientificName": "Tectona grandis"
     },
     "conservationStatus": "NE",
-    "imageUrl": "/ecollecta-minimal/images/teca-thumb.jpg",
-    "pdfUrl": "/ecollecta-minimal/pdfs/teca.pdf"
+    "imageUrl": "/ecollecta-minimal/images/tectona-grandis-thumb.png",
+    "pdfUrl": "/ecollecta-minimal/pdfs/tectona-grandis.pdf"
   },
   {
     "id": "QR-PLA_TRA_LIL_POA_POA_BAM_VUL-F32136",
@@ -59,7 +59,7 @@
       "scientificName": "Sideroxylon capiri"
     },
     "conservationStatus": "LC",
-    "imageUrl": "/ecollecta-minimal/images/sideroxylon-capiri-thumb.jpeg",
+    "imageUrl": "/ecollecta-minimal/images/sideroxylon-capiri-thumb.png",
     "pdfUrl": "/ecollecta-minimal/pdfs/sideroxylon-capiri.pdf"
   },
   {
@@ -80,7 +80,7 @@
       "scientificName": "Ceiba pentandra"
     },
     "conservationStatus": "LC",
-    "imageUrl": "/ecollecta-minimal/images/ceiba-pentandra-thumb.jpg",
+    "imageUrl": "/ecollecta-minimal/images/ceiba-pentandra-thumb.png",
     "pdfUrl": "/ecollecta-minimal/pdfs/ceiba-pentandra.pdf"
   },
   {
@@ -525,24 +525,255 @@
     "pdfUrl": "/ecollecta-minimal/pdfs/samyda-spinulosa.pdf"
   },
   {
-    "id": "QR-ACE_TRA_EQU_SAP_SIM_SIM_AMA-5A6397",
-    "scientificName": "Simarouba amara",
-    "fullScientificName": "Simarouba amara Aubl.",
-    "commonName": "Aceituno",
-    "description": "Árbol perennifolio de gran porte, nativo de las regiones tropicales de América. Es una especie altamente valorada por la ligereza y calidad de su madera clara, así como por las propiedades medicinales de su corteza y raíces, que han sido utilizadas desde la época precolombina.\n\n### Descripción Botánica\n* **Altura y Copa:** Puede alcanzar entre 15 y 30 metros de altura. Su copa es redondeada, densa y de color verde oscuro brillante, proporcionando una sombra excelente.\n* **Tronco y Corteza:** Tronco recto y cilíndrico. La corteza es lisa de color gris claro en árboles jóvenes, volviéndose ligeramente rugosa con la edad. Toda la corteza posee un sabor extremadamente amargo.\n* **Hojas:** Compuestas, alternas y de forma imparipinnada. Los folíolos son coriáceos, de forma oblonga y tienen un color verde oscuro muy brillante en el haz, lo que hace que el árbol destaque visualmente en el campus.\n\n\n\n* **Flores:** Es una especie dioica (flores macho y hembra en árboles distintos). Las flores son pequeñas, de color verde amarillento, dispuestas en grandes panículas terminales.\n* **Fruto:** Una drupa ovalada (similar a una aceituna) de unos 1.5 a 2 cm. Al madurar, el fruto cambia de verde a un color negro púrpura brillante. Contiene una pulpa blanca comestible pero de sabor tenue, y una semilla rica en aceites.\n\n\n\n### Ecología y Distribución\nSe distribuye desde Centroamérica hasta la cuenca del Amazonas. En Nicaragua, el Aceituno es común en bosques secundarios y zonas intervenidas, adaptándose bien tanto a condiciones de humedad como a periodos secos moderados.\n* **Hábito:** Es una especie de rápido crecimiento y marcadamente heliófita (necesita luz plena).\n* **Interacción Biológica:** Sus frutos son una fuente de alimento vital para diversas especies de aves y monos, quienes dispersan sus semillas por el ecosistema.\n\n### Usos Principales\n* **Maderable (Económico):** Su madera es conocida comercialmente como \"Aceituno\". Es una madera liviana, de color blanco amarillento, fácil de trabajar y con un brillo natural. Se utiliza extensamente en carpintería de interiores, fabricación de cajas, fósforos, molduras y juguetes.\n* **Medicinal (Etnobotánica):** Documentado ampliamente por Grijalva, el Aceituno es apodado \"el árbol contra la disentería\". El cocimiento de su corteza es un remedio tradicional muy potente para tratar parásitos intestinales, diarreas crónicas y malaria.\n* **Industrial:** De las semillas se puede extraer un aceite comestible y graso que antiguamente se utilizaba para la fabricación de jabones y velas.\n\n---\n**Fuentes de Referencia:**\n* Clasificación Taxonómica y Autoridad: [Tropicos.org - Missouri Botanical Garden](https://tropicos.org/name/29400090)\n* Etnobotánica Local: [Flora Útil de Nicaragua (Alfredo Grijalva) - Bio-Nica.info](http://www.bio-nica.info/biblioteca/GrijalvaFloraUtilNicaragua.pdf)\n* Perfil Forestal: [El Mundo Forestal - Ficha del Aceituno](https://www.elmundoforestal.com/portfolio/aceituno/)\n* Estado de Conservación Global: [Lista Roja de Especies Amenazadas de la UICN](https://www.iucnredlist.org/species/61966243/146769408)",
+    "id": "QR-PLA_TRA_EQU_FAB_FAB_CAS_FIS-C1B00D",
+    "scientificName": "Cassia fistula",
+    "fullScientificName": "Cassia fistula L.",
+    "commonName": "Aceituno (Lluvia de Oro)",
+    "description": "Árbol caducifolio de tamaño mediano, originario del sudeste asiático pero ampliamente cultivado en Nicaragua como ornamental. Es uno de los árboles más espectaculares del campus durante su floración, cuando se cubre de cascadas doradas.\n\n### Descripción Botánica\n* **Hojas:** Como se observa en tu fotografía, posee hojas compuestas y pinnadas de gran tamaño. Los folíolos son ovados, de un verde claro mate y se disponen en pares (paripinnadas).\n* **Flores:** Su rasgo más distintivo son los racimos colgantes (hasta 50 cm de largo) de flores amarillas vibrantes. Florece generalmente al final de la época seca.\n* **Fruto:** Produce vainas cilíndricas, largas (30-60 cm) y leñosas de color café oscuro o negro al madurar. Estas vainas no se abren solas y contienen una pulpa negra dulce y pegajosa.\n\n\n### Ecología y Distribución\nAmpliamente distribuido en el Pacífico de Nicaragua.\n* **Hábito:** Prefiere pleno sol y es muy resistente a las altas temperaturas de León. Pierde sus hojas justo antes de florecer, lo que hace que los racimos amarillos resalten mucho más.\n\n### Usos Principales\n* **Ornamental:** Es su uso principal en la ULSA. Se planta en avenidas y jardines por su sombra rala y su belleza estética.\n* **Medicinal:** La pulpa negra dentro de las vainas es conocida en la medicina tradicional como un laxante suave pero efectivo. Sin embargo, las semillas pueden ser tóxicas si se ingieren en exceso.",
     "taxonomy": {
-      "kingdom": "Aceituno",
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class_": "Equisetopsida",
+      "order": "Fabales",
+      "family": "Fabaceae",
+      "genus": "Cassia",
+      "species": "fistula",
+      "authority": "L.",
+      "scientificName": "Cassia fistula"
+    },
+    "conservationStatus": "LC",
+    "imageUrl": "/ecollecta-minimal/images/cassia-fistula-thumb.png",
+    "pdfUrl": "/ecollecta-minimal/pdfs/cassia-fistula.pdf"
+  },
+  {
+    "id": "QR-PLA_MAG_MAG_FAB_FAB_ENT_CYC-89DE50",
+    "scientificName": "Enterolobium Cyclocarpum",
+    "fullScientificName": "Enterolobium Cyclocarpum (Jacq.) Griseb. 1860",
+    "commonName": "Guanacaste",
+    "description": "Es un árbol muy alto y muy ancho que se relaciona con la presencia de un río debajo de sus grandes troncos, por lo que a menudo tiene la apariencia de un samán, del que se diferencia por ser más alto y abierto, es decir, menos achaparrado y también por sus frutos. El fruto en legumbre tiene forma de círculo helicoidal, de modo que el ápice toca casi con la base. El tronco puede alcanzar 16 dm de ancho, y hay ejemplares de 4 m de diámetro. Alcanza alturas de 16 a 28 m con una gran expansión del ramaje. Las hojas recuerdan al tamarindo.\n# Forma\nÁrbol grande y llamativo, caducifolio, de 20 a 30 m (hasta 45 m) de altura, con un diámetro a la altura del pecho hasta de 3 m.\n# Copa/hojas\nCopa hemisférica. El follaje es abundante, dando a la amplia copa una forma más ancha que alta. Libre de competencia por la luz puede alcanzar grandes diámetros.\nHojas bipinnadas con cuatro a quince pares de pinnas opuestas, miden de 15 a 40 cm de largo; folíolos numerosos (quince a treinta pares por pinna) de color verde brillante que se pliegan durante la noche.\n# Tronco/ramas\nTronco derecho y a veces con pequeños contrafuertes en la base. Ramas ascendentes.\n# Corteza\nExterna lisa a granulosa y a veces ligeramente fisurada, gris clara a gris pardusca, con abundantes lenticelas alargadas, suberificadas, dispuestas longitudinalmente. \"Interna\" de color crema rosado, granulosa, con exudado pegajoso y dulzón. Grosor: 2 a 3 cm.\n# Flor(es)\nEn pequeñas cabezuleas pedunculadas axilares, de 1,5 a 2 cm de diámetro, sobre pedúnculos de 1,5 a 3,5 cm de largo. Flores actinomórficas, cáliz verde y tubular; corola verde clara, de 5 a 6 mm de largo.\n# Fruto(s)￼\nFruto característico de la especie. Consiste en una vaina circular indehiscente, de 7 a 15 cm de diámetro, aplanada y enroscada, leñosa, moreno oscura, brillante, de sabor dulce. Contiene de diez a quince semillas.\n# Semilla(s)\nSemillas grandes, ovoides y aplanadas, de 2,3 por 1,5 cm, morenas y brillantes con una línea pálida con la forma del contorno de la semilla, rodeadas por una pulpa esponjosa y fibrosa de olor y sabor dulce. Presentan una testa extremadamente dura que impide la germinación hasta que una modificación estructural permita la hidratación del embrión.\n# Raíz\nSistema radical extenso y profundo.\n# Sexualidad\nHermafrodita.\n# Número cromosómico\n2n = 26",
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Magnoliophyta",
+      "class_": "Magnoliopsida",
+      "order": "Fabales",
+      "family": "Fabaceae",
+      "genus": "Enterolobium",
+      "species": "Cyclocarpum",
+      "authority": "(Jacq.) Griseb. 1860",
+      "scientificName": "Enterolobium Cyclocarpum"
+    },
+    "conservationStatus": "LC",
+    "imageUrl": "/ecollecta-minimal/images/enterolobium-cyclocarpum-thumb.png",
+    "pdfUrl": "/ecollecta-minimal/pdfs/enterolobium-cyclocarpum.pdf"
+  },
+  {
+    "id": "QR-PLA_TRA_EQU_SAP_BUR_BUR_SIM-8B2EE2",
+    "scientificName": "Bursera simaruba",
+    "fullScientificName": "Bursera simaruba (L.) Sarg.",
+    "commonName": "Indio Desnudo (Jiñocuabo)",
+    "description": "### Descripción\nEl jiñocuabo es un árbol muy resistente y de rápido crecimiento originario de las Indias Occidentales y América Central. En la madurez alcanza los 30 m (100 pies). Es tolerante a largos períodos de sequía y se propaga con facilidad.\n\n### Usos\nLos usos más beneficiosos del jiñocuabo son: como cerca viva, como ancla en el control de la erosión, como rompeviento y como fuente de néctar. Proporciona sombra rápida y es atractivo por su corteza delgada de color cobre que se desprende para mostrar el verde debajo. La madera es fácil de trabajar cuando se hacen muebles. Produce combustible útil pero de mala calidad. El árbol produce una resina aromática que se usa como incienso, para barniz y pegamento doméstico. Las flores, las hojas, los brotes tiernos y los frutos son consumidos por los monos y ocasionalmente por las cabras y el ganado.\n\n### Cultivo\n- Elevación: Hasta 1,000 m (3,280 pies)\n- Precipitación: 500-3,000 mm (20-120 pulgadas)\n- Tipos de suelo: Muchos tipos de suelo son apropiados, incluso con algo de salinidad.\n- Rango de temperatura: 18-25 ºC (64-77 ºF)\n\n### La cosecha y producción de semillas\nEl jiñocuabo produce flores verdes diminutas , racimos de pequeños frutos y vainas de semillas. Los esquejes de 1.5 a 3 m (60 a 120 pulgadas) de largo y de 10 a 15 cm (4 a 6 pulgadas) de grosor, espaciados a 3 m (117 pulgadas) de distancia, enraizarán fácilmente para comenzar una cerca viva. Los tocones se regenerarán rápidamente y las semillas germinarán en suelo húmedo. Las semillas serán viables durante 10 meses si se mantienen frescas, secas y oscuras.\n\n### Cocina y Nutrición\nTodas las partes del árbol son resinosas y pueden ser ligeramente tóxicas, por lo tanto, no son adecuadas para la alimentación. Tiene algunos usos medicinales.",
+    "taxonomy": {
+      "kingdom": "Plantae",
       "phylum": "Tracheophyta",
       "class_": "Equisetopsida",
       "order": "Sapindales",
-      "family": "Simaroubaceae",
-      "genus": "Simarouba",
-      "species": "amara",
-      "authority": "Aubl.",
-      "scientificName": "Simarouba amara"
+      "family": "Burseraceae",
+      "genus": "Bursera",
+      "species": "simaruba",
+      "authority": "(L.) Sarg.",
+      "scientificName": "Bursera simaruba"
     },
     "conservationStatus": "LC",
-    "imageUrl": "/ecollecta-minimal/images/simarouba-amara-thumb.png",
-    "pdfUrl": "/ecollecta-minimal/pdfs/simarouba-amara.pdf"
+    "imageUrl": "/ecollecta-minimal/images/bursera-simaruba-thumb.png",
+    "pdfUrl": "/ecollecta-minimal/pdfs/bursera-simaruba.pdf"
+  },
+  {
+    "id": "QR-PLA_TRA_EQU_ROS_MOR_FIC_INS-781BD1",
+    "scientificName": "Ficus insipida",
+    "fullScientificName": "Ficus insipida Willd.",
+    "commonName": "Chilamate",
+    "description": "Árbol de gran porte y rápido crecimiento, nativo de las regiones tropicales de América. El Chilamate es una especie higrófila (amante del agua) y es uno de los árboles más emblemáticos de Nicaragua, presente tanto en paisajes rurales como en el escudo de armas de algunas ciudades del país.\n\n### Descripción Botánica\n* **Altura y Copa:** Puede alcanzar dimensiones monumentales, de 20 a 40 metros de altura. Su copa es amplia, densa y de color verde oscuro, proporcionando una sombra muy fresca.\n* **Tronco y Raíces:** El tronco es recto y cilíndrico, pero su característica más notable son las \"gambas\" o raíces tablares (contrafuertes) muy desarrolladas en la base, que le dan estabilidad en suelos blandos. La corteza es lisa y de color gris claro.\n* **Látex:** Al herir cualquier parte de la planta (hojas, tronco o frutos), emana un látex blanco lechoso, abundante y muy pegajoso.\n* **Hojas:** Simples, alternas y de forma elíptica a oblonga, con una textura lisa y coriácea.\n\n\n\n* **Fruto (Sicono):** No produce frutos tradicionales, sino \"higos\" (receptáculos cerrados llamados siconos). Son globosos, de color verde con manchas claras al madurar y crecen de forma solitaria en las axilas de las hojas.\n\n\n\n### Ecología y Distribución\nSe distribuye desde México hasta el norte de Sudamérica. En Nicaragua es muy común en las riberas de ríos, lagos y zonas con mantos freáticos superficiales.\n* **Relación Simbiótica:** Como todos los *Ficus*, depende exclusivamente de una especie específica de avispa para su polinización.\n* **Importancia para la Fauna:** Sus higos son una fuente de alimento vital para peces (cuando caen al agua), aves, murciélagos y monos, quienes actúan como sus principales dispersores.\n\n### Usos Principales\n* **Medicinal (Etnobotánica):** Documentado por Grijalva, el látex del Chilamate es un remedio tradicional muy potente utilizado como antihelmíntico (para expulsar parásitos intestinales como la solitaria). Sin embargo, debe usarse con extrema precaución por su toxicidad.\n* **Protección de Cuencas:** Debido a su sistema radicular, es una especie excelente para prevenir la erosión de las riberas y proteger fuentes de agua.\n* **Sombra y Ornamental:** Muy apreciado en fincas y recintos amplios por su belleza y la calidad de su sombra.",
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class_": "Equisetopsida",
+      "order": "Rosales",
+      "family": "Moraceae",
+      "genus": "Ficus",
+      "species": "insipida",
+      "authority": "Willd.",
+      "scientificName": "Ficus insipida"
+    },
+    "conservationStatus": "LC",
+    "imageUrl": "/ecollecta-minimal/images/ficus-insipida-thumb.png",
+    "pdfUrl": "/ecollecta-minimal/pdfs/ficus-insipida.pdf"
+  },
+  {
+    "id": "QR-PLA_TRA_EQU_MYR_MYR_EUC_CAM-BF3890",
+    "scientificName": "Eucalyptus camaldulensis",
+    "fullScientificName": "Eucalyptus camaldulensis Dehnh.",
+    "commonName": "Eucalipto",
+    "description": "Árbol perennifolio de gran porte y rápido crecimiento, originario de Australia pero ampliamente naturalizado en Nicaragua. Es una de las especies forestales más plantadas en el mundo debido a su adaptabilidad a climas áridos y la versatilidad de su madera.\n\n### Descripción Botánica\n* **Altura y Copa:** Puede alcanzar entre 20 y 45 metros de altura. Su copa es abierta e irregular, con un follaje péndulo que se mueve fácilmente con el viento.\n* **Tronco y Corteza:** Tronco recto y cilíndrico. Posee una corteza lisa de color blanco o grisáceo que se desprende en largas tiras o placas irregulares, revelando manchas de color café o rojizo (de ahí el nombre \"Eucalipto Rojo\").\n* **Hojas:** Las hojas adultas son alternas, de forma lanceolada y curvada (forma de hoz o media luna). Tienen un color verde grisáceo y, al estrujarlas, liberan un fuerte y característico olor alcanforado debido a sus aceites esenciales.\n\n\n\n* **Flores:** Pequeñas, de color crema o blanco, agrupadas en umbelas. No tienen pétalos vistosos; lo que se ve son numerosos estambres que parecen pequeños pompones.\n* **Fruto:** Una cápsula leñosa pequeña en forma de copa o cono invertido (operculada), que contiene numerosas semillas diminutas.\n\n\n\n### Ecología y Distribución\nIntroducido en Nicaragua principalmente para programas de reforestación y cortinas rompevientos en el Occidente (León).\n* **Adaptación:** Es extremadamente resistente a las inundaciones temporales y a las sequías prolongadas, gracias a su sistema radicular profundo.\n* **Impacto Ecológico:** Es un tema de debate en ingeniería forestal. Si bien es excelente para producir madera rápido y drenar suelos pantanosos, consume grandes cantidades de agua y sus hojas liberan sustancias (alelopatía) que impiden el crecimiento de otras plantas nativas a su alrededor.\n\n### Usos Principales\n* **Forestal e Industrial:** Su madera es pesada, dura y resistente. Se utiliza extensamente para postes de tendido eléctrico, leña de alto poder calorífico, puntales para minería y construcción pesada.\n* **Medicinal (Etnobotánica):** Las hojas son un pilar en la medicina tradicional nicaragüense para tratar afecciones respiratorias (gripe, asma, bronquitis) mediante vaporizaciones o infusiones, gracias a su alto contenido de eucaliptol.\n* **Protección:** En León es vital como cortina rompevientos para proteger los cultivos de la erosión eólica durante los fuertes vientos del verano.",
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class_": "Equisetopsida",
+      "order": "Myrtales",
+      "family": "Myrtaceae",
+      "genus": "Eucalyptus",
+      "species": "camaldulensis",
+      "authority": "Dehnh.",
+      "scientificName": "Eucalyptus camaldulensis"
+    },
+    "conservationStatus": "LC",
+    "imageUrl": "/ecollecta-minimal/images/eucalyptus-camaldulensis-thumb.png",
+    "pdfUrl": "/ecollecta-minimal/pdfs/eucalyptus-camaldulensis.pdf"
+  },
+  {
+    "id": "QR-PLA_TRA_EQU_SAP_ANA_ANA_OCC-608216",
+    "scientificName": "Anacardium occidentale",
+    "fullScientificName": "Anacardium occidentale L.",
+    "commonName": "Marañón",
+    "description": "Árbol frutal perennifolio de tamaño mediano, nativo de las regiones tropicales de América, siendo Brasil uno de sus principales centros de origen. Es mundialmente conocido por su nuez comestible y su pseudofruto carnoso, ambos muy apreciados en la gastronomía y la industria.\n\n### Descripción Botánica\n* **Altura y Copa:** Alcanza generalmente entre 5 y 10 metros de altura, aunque puede llegar a 12 m. Posee un tronco torcido con corteza de color gris oscuro, y una copa amplia y extendida, a menudo ramificada desde muy bajo.\n* **Hojas:** Simples, alternas, de forma obovada y textura coriácea (duras). Como se aprecia en la imagen, son de un verde oscuro brillante, con la nervadura central marcada. Al estrujarlas, desprenden un olor característico.\n* **Flores:** Pequeñas, de color rosado amarillento, agrupadas en panículas terminales. Son muy fragantes y melíferas, atrayendo a múltiples polinizadores.\n* **Fruto y Pseudofruto:** Lo más característico de la especie. El verdadero fruto es la nuez de forma arriñonada (o de guante de boxeo) que cuelga en la parte inferior, de color grisáceo. Sobre ella se desarrolla un pseudofruto carnoso y jugoso (la parte roja en la foto), de sabor dulce y astringente, que es en realidad un agrandamiento del pedúnculo de la flor.\n\n\n### Ecología y Distribución\nAmpliamente cultivado y naturalizado en todas las regiones tropicales del mundo. En Nicaragua es muy abundante en los departamentos de León, Chinandega y Managua, donde se cultiva tanto a nivel comercial como en huertos familiares.\n* **Adaptación:** Es una especie heliófita (amante del sol) que prospera excelentemente en climas cálidos y secos. Es notablemente resistente a suelos pobres, arenosos y a sequías prolongadas, gracias a su sistema radicular profundo.\n\n### Usos Principales\n* **Alimenticio (Nuez y Pseudofruto):** La nuez de marañón es un producto de exportación de alto valor, consumida tostada. El pseudofruto carnoso se consume fresco, en refrescos naturales (chichas, jugos), encurtido o para elaborar dulces y mermeladas.\n* **Industrial:** La cáscara de la nuez contiene un aceite cáustico (LCC o líquido de cáscara de marañón) que se utiliza industrialmente para fabricar resinas, plásticos, frenos y barnices.\n* **Medicinal (Etnobotánica):** Documentado por Grijalva, la infusión de la corteza y las hojas se ha utilizado tradicionalmente por sus propiedades astringentes para tratar la diarrea, y de forma tópica para tratar afecciones de la piel y llagas bucales.\n* **Sombra y Ornamental:** Debido a su copa ancha y densa, es un excelente árbol de sombra para patios y áreas abiertas del campus.",
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class_": "Equisetopsida",
+      "order": "Sapindales",
+      "family": "Anacardiaceae",
+      "genus": "Anacardium",
+      "species": "occidentale",
+      "authority": "L.",
+      "scientificName": "Anacardium occidentale"
+    },
+    "conservationStatus": "LC",
+    "imageUrl": "/ecollecta-minimal/images/anacardium-occidentale-thumb.png",
+    "pdfUrl": "/ecollecta-minimal/pdfs/anacardium-occidentale.pdf"
+  },
+  {
+    "id": "QR-PLA_TRA_EQU_GEN_RUB_IXO_COC-6CAA36",
+    "scientificName": "Ixora coccinea",
+    "fullScientificName": "Ixora coccinea L.",
+    "commonName": "Isora (Coralillo)",
+    "description": "Arbusto perennifolio de porte bajo a mediano, originario del sudeste asiático. Es una de las plantas ornamentales más utilizadas en el paisajismo tropical debido a su floración persistente, su follaje brillante y su facilidad para ser moldeada mediante poda.\n\n### Descripción Botánica\n* **Hábito:** Arbusto denso que suele alcanzar de 1 a 3 metros de altura. Como se ve en la imagen, tiene un crecimiento erecto con múltiples ramificaciones desde la base.\n* **Hojas:** Simples, opuestas y de forma oblonga a elíptica. Son de textura coriácea (duras), con un color verde oscuro muy brillante en el haz y bordes enteros.\n* **Flores:** Su principal atractivo. Son flores pequeñas y tubulares que se agrupan en corimbos (racimos densos y redondeados) en las puntas de las ramas. Aunque la más común en Nicaragua es la de color rojo vibrante (como la de la foto), también existen variedades en amarillo, naranja y rosado.\n\n\n* **Fruto:** Una baya globosa de color rojo oscuro a negro al madurar, aunque es poco común verlos en plantas de jardín debido a las podas constantes.\n\n### Ecología y Distribución\nAmpliamente distribuida en zonas urbanas y residenciales de Nicaragua.\n* **Hábito:** Es una especie heliófita; necesita exposición directa al sol para florecer con intensidad. En León, soporta perfectamente las altas temperaturas siempre que tenga un riego regular.\n* **Interacción Biológica:** Es una planta excelente para atraer biodiversidad urbana, especialmente colibríes y mariposas, quienes buscan el néctar en el fondo de sus flores tubulares.\n\n\n### Usos Principales\n* **Ornamental:** Es su uso principal en la ULSA. Se utiliza para crear setos vivos, borduras o como plantas individuales decorativas.\n* **Medicinal:** En algunas regiones de Asia, las raíces y flores se utilizan en la medicina tradicional por sus propiedades astringentes y para tratar afecciones de la piel, aunque en Nicaragua su uso es casi puramente estético.",
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class_": "Equisetopsida",
+      "order": "Gentianales",
+      "family": "Rubiaceae",
+      "genus": "Ixora",
+      "species": "coccinea",
+      "authority": "L.",
+      "scientificName": "Ixora coccinea"
+    },
+    "conservationStatus": "NE",
+    "imageUrl": "/ecollecta-minimal/images/ixora-coccinea-thumb.png",
+    "pdfUrl": "/ecollecta-minimal/pdfs/ixora-coccinea.pdf"
+  },
+  {
+    "id": "QR-PLA_TRA_EQU_MYR_COM_TER_CAT-E7BE1B",
+    "scientificName": "Terminalia catappa",
+    "fullScientificName": "Terminalia catappa L.",
+    "commonName": "Almendra de la India",
+    "description": "Árbol caducifolio de tamaño mediano a grande, originario de las regiones tropicales de Asia y Australia. Se ha naturalizado tanto en las costas y ciudades de Nicaragua que mucha gente lo considera nativo. Es apreciado por su valor ornamental, su sombra densa y sus semillas comestibles.\n\n### Descripción Botánica\n* **Altura y Copa:** Puede alcanzar hasta 25 metros. Su copa es muy característica: las ramas crecen en verticilos horizontales, dándole un aspecto estratificado (en pisos). \n* **Hojas:** Simples, alternas y agrupadas al final de las ramas. Tienen forma obovada (más anchas en la punta). Como se ve en la imagen, son de color verde brillante, pero antes de caer se tornan de un color rojo o amarillo intenso debido a la degradación de la clorofila.\n\n\n* **Flores:** Pequeñas, de color blanco verdoso, dispuestas en espigas axilares. No son muy vistosas, pero son ricas en néctar.\n* **Fruto:** Una drupa ovalada y comprimida (como una almendra aplastada), de unos 5 a 7 cm. Al madurar pasa de verde a amarillo o rojizo. La cáscara es fibrosa y flota en el agua, lo que le permite colonizar costas.\n\n\n### Ecología y Distribución\nAbundante en todo el territorio nicaragüense, especialmente en zonas costeras y áreas urbanas del Pacífico.\n* **Hábito:** Es una especie heliófita que tolera la salinidad, los vientos fuertes y las altas temperaturas. Es ideal para el clima de León.\n* **Ciclo:** Pierde sus hojas dos veces al año en periodos de sequía, creando una alfombra de hojas rojas muy característica.\n\n### Usos Principales\n* **Sombra y Ornamental:** Es su uso principal en la ULSA. Sus \"pisos\" de ramas crean una cobertura amplia ideal para zonas de descanso de estudiantes.\n* **Alimenticio:** Dentro de la cáscara fibrosa del fruto se encuentra una semilla alargada (la \"almendrita\") que es comestible y tiene un sabor similar a la almendra europea.\n* **Medicinal:** Las hojas se utilizan en la medicina tradicional para tratar problemas hepáticos y afecciones de la piel. Además, los acuaristas las usan para acondicionar el agua de los peces debido a sus taninos.\n* **Tintóreo:** De la corteza y las hojas se puede extraer un tinte negro utilizado tradicionalmente para teñir cuero.",
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class_": "Equisetopsida",
+      "order": "Myrtales",
+      "family": "Combretaceae",
+      "genus": "Terminalia",
+      "species": "catappa",
+      "authority": "L.",
+      "scientificName": "Terminalia catappa"
+    },
+    "conservationStatus": "LC",
+    "imageUrl": "/ecollecta-minimal/images/terminalia-catappa-thumb.png",
+    "pdfUrl": "/ecollecta-minimal/pdfs/terminalia-catappa.pdf"
+  },
+  {
+    "id": "QR-PLA_TRA_PIN_PIN_CUP_PLA_ORI-1C2A69",
+    "scientificName": "Platycladus orientalis",
+    "fullScientificName": "Platycladus orientalis (L.) Franco",
+    "commonName": "Ciprés",
+    "description": "Arbusto o árbol pequeño de hoja perenne, originario de China y Corea. Es ampliamente utilizado en el paisajismo de Nicaragua debido a su follaje denso, su forma geométrica natural y su gran resistencia a la poda decorativa.\n\n### Descripción Botánica\n* **Altura y Copa:** En jardinería suele mantenerse entre 2 y 5 metros. Su copa es naturalmente ovoide o cónica. Como se observa en la imagen de la ULSA, las ramas crecen de forma vertical y aplanada, disponiéndose como si fueran las varillas de un abanico.\n* **Hojas:** Son diminutas, en forma de escamas imbricadas (puestas unas sobre otras como tejas) y muy apretadas contra las ramillas. Tienen un color verde amarillento brillante que puede tornarse algo cobrizo en condiciones de estrés hídrico.\n* **Flores:** Al ser una gimnosperma, no tiene flores verdaderas. Produce estructuras reproductivas llamadas estróbilos o conos.\n* **Fruto (Cono):** Produce conos carnosos de color azul-verdoso cuando son jóvenes (cubiertos de una cera llamada pruina), que al madurar se vuelven leñosos, de color marrón y se abren para liberar las semillas.\n\n\n### Ecología y Distribución\nEs una especie exótica muy bien adaptada a las zonas urbanas de Nicaragua.\n* **Resistencia:** Es extremadamente rústica. Soporta muy bien la contaminación urbana, los suelos pobres y la exposición directa al sol, lo que explica su presencia en las jardineras de concreto del campus.\n* **Mantenimiento:** Tolera podas frecuentes, lo que permite mantener la forma redondeada o globular que se aprecia en las fotografías frente al edificio de Casa Pellas.\n\n### Usos Principales\n* **Ornamental:** Es su uso exclusivo en la universidad. Se utiliza para delimitar senderos, crear barreras visuales bajas o como elementos arquitectónicos vivos frente a fachadas.\n* **Simbolismo:** En muchas culturas asiáticas, de donde es originaria, se asocia con la longevidad y la vitalidad, siendo plantada frecuentemente cerca de templos.",
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class_": "Pinopsida",
+      "order": "Pinales",
+      "family": "Cupressaceae",
+      "genus": "Platycladus",
+      "species": "orientalis",
+      "authority": "(L.) Franco",
+      "scientificName": "Platycladus orientalis"
+    },
+    "conservationStatus": "NT",
+    "imageUrl": "/ecollecta-minimal/images/platycladus-orientalis-thumb.png",
+    "pdfUrl": "/ecollecta-minimal/pdfs/platycladus-orientalis.pdf"
+  },
+  {
+    "id": "QR-PLA_TRA_CYC_CYC_CYC_CYC_REV-466DDE",
+    "scientificName": "Cycas revoluta",
+    "fullScientificName": "Cycas revoluta Thunb.",
+    "commonName": "Cica",
+    "description": "Planta perenne de crecimiento muy lento, originaria del sur de Japón. Aunque se asemeja a una palmera por su corona de hojas, es en realidad una cícada, un grupo de plantas primitivas que no ha cambiado mucho en millones de años.\n\n### Descripción Botánica\n* **Altura y Copa:** En el campus de la ULSA se observa como un arbusto bajo, pero con las décadas puede formar un tronco cilíndrico de hasta 2 metros. Su copa está formada por una roseta circular de hojas rígidas.\n* **Hojas:** Pinnadas, de un verde oscuro brillante y textura muy dura. Los folíolos son estrechos, terminan en punta punzante y tienen los bordes enrollados hacia abajo (de ahí el epíteto *revoluta*).\n* **Reproducción:** Al ser una gimnosperma dioica, existen plantas macho y hembra. \n    * El **macho** produce un cono central alargado (estróbilo) que emite polen.\n    * La **hembra** desarrolla una masa lanosa de hojas modificadas (esporofilos) en el centro, donde se producen semillas grandes y anaranjadas.\n\n\n### Ecología y Distribución\nEspecie exótica muy popular en Nicaragua por su elegancia y resistencia.\n* **Resistencia:** Soporta pleno sol y sequías prolongadas, aunque en León agradece un riego moderado para mantener el brillo de sus hojas. Es muy sensible al exceso de humedad en las raíces.\n* **Longevidad:** Es una de las plantas más longevas que puedes tener en un jardín; ejemplares bien cuidados pueden vivir cientos de años.\n\n### Usos Principales\n* **Ornamental:** Es su uso exclusivo en la universidad. Se utiliza como punto focal en jardines debido a su forma simétrica y arquitectónica.\n* **Dato de Seguridad:** Es importante notar que **toda la planta es tóxica**, especialmente las semillas, ya que contienen cicasina. En tu App de Ecollecta, podrías añadir una advertencia de seguridad para evitar que mascotas o niños pequeños ingieran las semillas.",
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class_": "Cycadopsida",
+      "order": "Cycadales",
+      "family": "Cycadaceae",
+      "genus": "Cycas",
+      "species": "revoluta",
+      "authority": "Thunb.",
+      "scientificName": "Cycas revoluta"
+    },
+    "conservationStatus": "LC",
+    "imageUrl": "/ecollecta-minimal/images/cycas-revoluta-thumb.png",
+    "pdfUrl": "/ecollecta-minimal/pdfs/cycas-revoluta.pdf"
+  },
+  {
+    "id": "QR-PLA_TRA_EQU_MAL_EUP_COD_VAR-EFD26F",
+    "scientificName": "Codiaeum variegatum",
+    "fullScientificName": "Codiaeum variegatum (L.) Rumph. ex A.Juss.",
+    "commonName": "Croton",
+    "description": "Arbusto perennifolio de follaje sumamente variable y colorido, nativo del sudeste asiático y Oceanía. Es una de las plantas ornamentales más apreciadas en las regiones tropicales debido a la policromía de sus hojas, que pueden presentar casi cualquier combinación de verde, amarillo, rojo, naranja y púrpura.\n\n### Descripción Botánica\n* **Hábito:** Arbusto que puede alcanzar de 1 a 3 metros de altura. En la imagen de la ULSA se observa como una planta de bordura, manteniendo un porte bajo y compacto.\n* **Hojas:** Son simples y alternas, de textura coriácea (dura y cerosa). La forma de la hoja es muy variable según el cultivar: pueden ser ovaladas, lanceoladas, lobuladas o incluso en espiral. \n* **Coloración:** Su rasgo principal. Las manchas y vetas de colores son el resultado de la acumulación de antocianinas y otros pigmentos que protegen a la planta del exceso de radiación solar.\n\n\n* **Flores:** Produce pequeñas flores en racimos largos (infrecuentes en plantas jóvenes o muy podadas). Son de color blanco o crema y pasan desapercibidas frente al espectáculo del follaje.\n* **Látex:** Como muchas euforbiáceas, al cortar una hoja o tallo, emana un látex lechoso que puede ser irritante para la piel y las mucosas.\n\n### Ecología y Distribución\nEspecie exótica naturalizada en los jardines de Nicaragua.\n* **Luz y Color:** Es una planta heliófita. Cuanta más luz solar directa recibe (como ocurre en León), más intensos y brillantes se vuelven sus colores. En la sombra, tiende a volverse predominantemente verde.\n* **Suelos:** Prefiere suelos bien drenados y ricos en materia orgánica. Es sensible al frío, pero tolera muy bien el calor húmedo y seco del Pacífico nicaragüense.\n\n### Usos Principales\n* **Ornamental:** Es su uso exclusivo en la universidad. Se utiliza para crear contrastes cromáticos, setos bajos o para delimitar senderos peatonales.\n* **Advertencia de Seguridad:** El látex y los frutos de esta planta son tóxicos si se ingieren. En la aplicación Ecollecta, se recomienda incluir una nota de advertencia para evitar el contacto directo con la savia durante las labores de poda.",
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class_": "Equisetopsida",
+      "order": "Malpighiales",
+      "family": "Euphorbiaceae",
+      "genus": "Codiaeum",
+      "species": "variegatum",
+      "authority": "(L.) Rumph. ex A.Juss.",
+      "scientificName": "Codiaeum variegatum"
+    },
+    "conservationStatus": "NE",
+    "imageUrl": "/ecollecta-minimal/images/codiaeum-variegatum-thumb.png",
+    "pdfUrl": "/ecollecta-minimal/pdfs/codiaeum-variegatum.pdf"
+  },
+  {
+    "id": "QR-PLA_TRA_EQU_ZIN_STR_STR_NIC-86E9BF",
+    "scientificName": "Strelitzia nicolai",
+    "fullScientificName": "Strelitzia nicolai Regel & K.Koch",
+    "commonName": "Ave del Paraíso Gigante",
+    "description": "Planta herbácea perenne de gran tamaño y aspecto arborescente, nativa de las regiones costeras del este de Sudáfrica. Es muy apreciada en el paisajismo de climas tropicales y subtropicales por su follaje escultural y sus flores exóticas de gran tamaño.\n\n### Descripción Botánica\n* **Hábito:** Aunque parece un árbol por su altura (puede alcanzar los 6-10 metros), técnicamente es una planta herbácea. Los tallos son leñosos en la base y muestran las cicatrices de las hojas viejas.\n* **Hojas:** Como se aprecia perfectamente en la imagen, son grandes, de color verde grisáceo y de textura coriácea. Crecen dispuestas en dos filas opuestas (disticas), creando una forma de abanico muy característica. Son propensas a rasgarse con el viento, lo que les da un aspecto plumoso natural.\n* **Flores:** Su rasgo más espectacular. A diferencia de la *Strelitzia reginae* (que es naranja y pequeña), esta especie produce inflorescencias mucho más grandes con brácteas de color azul oscuro o púrpura y flores blancas. La estructura parece la cabeza de un ave con un penacho blanco.\n\n\n* **Fruto:** Una cápsula leñosa que contiene semillas negras rodeadas por un arilo de color naranja brillante.\n\n### Ecología y Distribución\nEspecie exótica ornamental muy común en jardines institucionales de Nicaragua.\n* **Resistencia:** Se adapta muy bien al calor de León, aunque prefiere sitios donde el viento no sea tan fuerte para que sus hojas no se rompan demasiado. Requiere suelos bien drenados y riego moderado.\n* **Crecimiento:** Es de crecimiento moderadamente rápido una vez establecida y tiende a formar grupos o \"macollas\" de varios tallos.\n\n### Usos Principales\n* **Ornamental:** Es su uso exclusivo en la ULSA. Se utiliza como planta focal o para crear pantallas verdes cerca de edificios debido a su porte vertical y majestuoso.\n* **Biodiversidad:** Sus flores producen una gran cantidad de néctar, lo que atrae a aves nectarívoras en su hábitat original, y en Nicaragua puede atraer a colibríes y algunos insectos grandes.",
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class_": "Equisetopsida",
+      "order": "Zingiberales",
+      "family": "Strelitziaceae",
+      "genus": "Strelitzia",
+      "species": "nicolai",
+      "authority": "Regel & K.Koch",
+      "scientificName": "Strelitzia nicolai"
+    },
+    "conservationStatus": "LC",
+    "imageUrl": "/ecollecta-minimal/images/strelitzia-nicolai-thumb.png",
+    "pdfUrl": "/ecollecta-minimal/pdfs/strelitzia-nicolai.pdf"
   }
 ]
