@@ -54,8 +54,8 @@ function getStatusMeta(status: string) {
 
   return {
     label: "Normal",
-    chipClassName: "bg-[#30b778] text-white",
-    panelClassName: "border-[#30b778]/30 bg-[#30b778]/10 text-[#1e6d49]",
+    chipClassName: "bg-primary text-white",
+    panelClassName: "border-primary/30 bg-primary/10 text-primary",
     description: "Se mantiene sin alertas inmediatas dentro del archivo actual.",
   };
 }
@@ -94,13 +94,13 @@ export default function SpeciesDetail() {
           fontFamily: '"Jost", "Segoe UI", "Helvetica Neue", sans-serif',
         }}
       >
-        <div className="w-full max-w-xl rounded-3xl border border-[#238937]/18 bg-white/92 px-8 py-12 text-center shadow-[0_24px_50px_-35px_rgba(35,137,55,0.5)]">
+        <div className="w-full max-w-xl rounded-3xl border border-primary/18 bg-white/92 px-8 py-12 text-center shadow-[0_24px_50px_-35px_rgba(35,137,53,0.5)]">
           <h1 className="text-3xl font-bold text-slate-900">Especie no encontrada</h1>
           <p className="mt-3 text-slate-600">
             La ficha que intentas abrir no esta disponible en el archivo actual.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
-            <Button asChild className="rounded-full bg-[#238937] px-6 text-white hover:bg-[#1d7130]">
+            <Button asChild className="rounded-full bg-primary px-6 text-white hover:bg-primary/90">
               <Link to="/archive">Volver al archivo</Link>
             </Button>
             <Button
@@ -138,7 +138,7 @@ export default function SpeciesDetail() {
       <FallingLeaves />
 
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute -left-28 top-[-140px] h-[340px] w-[340px] rounded-full bg-[#238937]/20 blur-3xl" />
+        <div className="absolute -left-28 top-[-140px] h-[340px] w-[340px] rounded-full bg-primary/20 blur-3xl" />
         <div className="absolute right-[-80px] top-[100px] h-[300px] w-[300px] rounded-full bg-[#140dbd]/16 blur-3xl" />
         <div className="absolute bottom-[-140px] left-1/2 h-[320px] w-[320px] -translate-x-1/2 rounded-full bg-[#ffb13c]/18 blur-3xl" />
       </div>
@@ -148,7 +148,7 @@ export default function SpeciesDetail() {
           <Button
             asChild
             variant="ghost"
-            className="-ml-3 rounded-full px-4 text-slate-700 hover:bg-white/70 hover:text-[#238937]"
+            className="-ml-3 rounded-full px-4 text-slate-700 hover:bg-white/70 hover:text-primary"
           >
             <Link to="/archive">
               <ArrowLeft className="mr-2 h-4 w-4" />
@@ -179,7 +179,7 @@ export default function SpeciesDetail() {
 
       <main className="relative z-10 mx-auto max-w-6xl px-6 pb-20">
         <section className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
-          <div className="overflow-hidden rounded-3xl border border-[#238937]/18 bg-white shadow-[0_24px_55px_-35px_rgba(15,23,42,0.45)]">
+          <div className="overflow-hidden rounded-3xl border border-primary/18 bg-white shadow-[0_24px_55px_-35px_rgba(15,23,42,0.45)]">
             <img
               src={species.imageUrl}
               alt={species.commonName}
@@ -187,8 +187,8 @@ export default function SpeciesDetail() {
             />
           </div>
 
-          <div className="rounded-3xl border border-[#238937]/18 bg-white/95 p-7 shadow-[0_24px_55px_-35px_rgba(20,13,189,0.38)] backdrop-blur-sm md:p-8">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#238937]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-[#238937]">
+          <div className="rounded-3xl border border-primary/18 bg-white/95 p-7 shadow-[0_24px_55px_-35px_rgba(20,13,189,0.38)] backdrop-blur-sm md:p-8">
+            <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
               <Leaf className="h-4 w-4" />
               Ficha botanica oficial
             </div>
@@ -247,7 +247,7 @@ export default function SpeciesDetail() {
               <div className="col-span-2 mt-4 flex flex-wrap justify-center gap-3">
                 <Button
                   asChild
-                  className="rounded-full bg-[#238937] px-8 text-white hover:bg-[#1d7130] shadow-lg transition-all"
+                  className="rounded-full bg-primary px-8 text-white hover:bg-primary/90 shadow-lg transition-all"
                 >
                   <a href={species.pdfUrl} target="_blank" rel="noopener noreferrer">
                     <Download className="mr-2 h-4 w-4" />
@@ -271,13 +271,13 @@ export default function SpeciesDetail() {
         </section>
 
         <section className="mt-8 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-          <article className="rounded-3xl border border-[#238937]/18 bg-white/95 p-7 shadow-[0_24px_55px_-35px_rgba(35,137,55,0.4)] md:p-8">
+          <article className="rounded-3xl border border-primary/18 bg-white/95 p-7 shadow-[0_24px_55px_-35px_rgba(35,137,53,0.4)] md:p-8">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#140dbd]">
               Descripcion
             </p>
             <h2 className="mt-2 text-3xl font-bold text-slate-900">Perfil botanico</h2>
 
-            <div className="prose prose-slate prose-headings:text-slate-900 prose-a:text-[#238937] prose-strong:text-slate-900 mt-6 max-w-none">
+            <div className="prose prose-slate prose-headings:text-slate-900 prose-a:text-primary prose-strong:text-slate-900 mt-6 max-w-none">
               <ReactMarkdown remarkPlugins={[remarkGfm]}>
                 {species.description}
               </ReactMarkdown>
@@ -306,7 +306,7 @@ export default function SpeciesDetail() {
               </div>
             </div>
 
-            <div className="rounded-3xl border border-[#238937]/18 bg-white/95 p-7 shadow-[0_24px_55px_-35px_rgba(35,137,55,0.35)] md:p-8">
+            <div className="rounded-3xl border border-primary/18 bg-white/95 p-7 shadow-[0_24px_55px_-35px_rgba(35,137,53,0.35)] md:p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#140dbd]">
                 Consulta rapida
               </p>
@@ -319,7 +319,7 @@ export default function SpeciesDetail() {
               <div className="mt-6 flex flex-col gap-3">
                 <Button
                   asChild
-                  className="rounded-full bg-[#238937] text-white hover:bg-[#1d7130]"
+                  className="rounded-full bg-primary text-white hover:bg-primary/90"
                 >
                   <a href={species.pdfUrl} target="_blank" rel="noopener noreferrer">
                     <Download className="mr-2 h-4 w-4" />

@@ -46,7 +46,7 @@ function getStatusMeta(status: string) {
 
   return {
     label: "Normal",
-    chipClassName: "bg-[#30b778] text-white",
+    chipClassName: "bg-primary text-white",
   };
 }
 
@@ -76,7 +76,7 @@ export default function Archive() {
       <FallingLeaves />
 
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute -left-28 top-[-140px] h-[340px] w-[340px] rounded-full bg-[#238937]/20 blur-3xl" />
+        <div className="absolute -left-28 top-[-140px] h-[340px] w-[340px] rounded-full bg-primary/20 blur-3xl" />
         <div className="absolute right-[-80px] top-[100px] h-[300px] w-[300px] rounded-full bg-[#140dbd]/16 blur-3xl" />
         <div className="absolute bottom-[-140px] left-1/2 h-[320px] w-[320px] -translate-x-1/2 rounded-full bg-[#ffb13c]/18 blur-3xl" />
       </div>
@@ -86,7 +86,7 @@ export default function Archive() {
           <Button
             asChild
             variant="ghost"
-            className="-ml-3 rounded-full px-4 text-slate-700 hover:bg-white/70 hover:text-[#238937]"
+            className="-ml-3 rounded-full px-4 text-slate-700 hover:bg-white/70 hover:text-primary"
           >
             <Link to="/">
               <ArrowLeft className="mr-2 h-4 w-4" />
@@ -114,7 +114,7 @@ export default function Archive() {
           />
 
           <div className="mt-6 flex items-center justify-center gap-3">
-            <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#238937]/12 text-[#238937]">
+            <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-primary/12 text-primary">
               <Leaf className="h-6 w-6" />
             </span>
             <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
@@ -128,8 +128,8 @@ export default function Archive() {
           </p>
 
           <div className="mx-auto mt-8 grid max-w-3xl grid-cols-1 gap-3 sm:grid-cols-3">
-            <div className="rounded-2xl border border-[#238937]/20 bg-white/80 p-3 text-center">
-              <p className="text-2xl font-extrabold text-[#238937]">{species.length}</p>
+            <div className="rounded-2xl border border-primary/20 bg-white/80 p-3 text-center">
+              <p className="text-2xl font-extrabold text-primary">{species.length}</p>
               <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-600">
                 Registradas
               </p>
@@ -152,7 +152,7 @@ export default function Archive() {
             </div>
           </div>
 
-          <div className="mx-auto mt-8 max-w-3xl rounded-3xl border border-[#238937]/18 bg-white/90 p-4 shadow-[0_24px_50px_-35px_rgba(35,137,55,0.55)] backdrop-blur-sm">
+          <div className="mx-auto mt-8 max-w-3xl rounded-3xl border border-primary/18 bg-white/90 p-4 shadow-[0_24px_50px_-35px_rgba(35,137,53,0.55)] backdrop-blur-sm">
             <div className="relative">
               <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4 text-slate-400">
                 <Search className="h-5 w-5" />
@@ -161,7 +161,7 @@ export default function Archive() {
               <input
                 type="text"
                 placeholder="Buscar por nombre comun o cientifico..."
-                className="block w-full rounded-2xl border border-slate-200 bg-[#f8fbf8] py-3 pl-11 pr-12 text-sm text-slate-700 placeholder-slate-400 outline-none transition focus:border-[#238937]/35 focus:ring-2 focus:ring-[#238937]/15"
+                className="block w-full rounded-2xl border border-slate-200 bg-[#f8fbf8] py-3 pl-11 pr-12 text-sm text-slate-700 placeholder-slate-400 outline-none transition focus:border-primary/35 focus:ring-2 focus:ring-primary/15"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
@@ -198,8 +198,8 @@ export default function Archive() {
         </section>
 
         {filteredSpecies.length === 0 ? (
-          <div className="rounded-3xl border border-[#238937]/18 bg-white/92 px-6 py-16 text-center shadow-[0_24px_50px_-35px_rgba(35,137,55,0.5)]">
-            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#238937]/10 text-[#238937]">
+          <div className="rounded-3xl border border-primary/18 bg-white/92 px-6 py-16 text-center shadow-[0_24px_50px_-35px_rgba(35,137,53,0.5)]">
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
               <Search className="h-6 w-6" />
             </div>
             <h3 className="mt-5 text-2xl font-bold text-slate-900">
@@ -211,7 +211,7 @@ export default function Archive() {
             </p>
             <Button
               onClick={() => setSearchTerm("")}
-              className="mt-6 rounded-full bg-[#238937] px-6 text-white hover:bg-[#1d7130]"
+              className="mt-6 rounded-full bg-primary px-6 text-white hover:bg-primary/90"
             >
               Limpiar busqueda
             </Button>
@@ -224,7 +224,7 @@ export default function Archive() {
               return (
                 <Card
                   key={tree.id}
-                  className="group relative isolate gap-0 overflow-hidden border border-[#238937]/20 bg-white p-0 shadow-[0_20px_55px_-35px_rgba(15,23,42,0.45)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_26px_65px_-30px_rgba(20,13,189,0.45)]"
+                  className="group relative isolate gap-0 overflow-hidden border border-primary/20 bg-white p-0 shadow-[0_20px_55px_-35px_rgba(15,23,42,0.45)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_26px_65px_-30px_rgba(20,13,189,0.45)]"
                 >
                   <span
                     className={`status-chip pointer-events-none absolute right-4 top-4 z-20 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] shadow-md transition-transform duration-300 group-hover:-translate-y-0.5 ${statusMeta.chipClassName}`}
@@ -265,7 +265,7 @@ export default function Archive() {
 
                     <Button
                       asChild
-                      className="h-10 w-full rounded-full bg-[#238937] text-white transition-all duration-300 group-hover:bg-[#140dbd]"
+                      className="h-10 w-full rounded-full bg-primary text-white transition-all duration-300 group-hover:bg-[#140dbd]"
                     >
                       <Link to={`/species/${tree.id}`}>
                         <BookOpenText className="mr-2 h-4 w-4" />

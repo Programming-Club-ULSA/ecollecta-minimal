@@ -145,12 +145,20 @@ class DatabaseManager:
         qr.make(fit=True)
 
         qr_img = qr.make_image(
-            fill_color="#2A9D8F",
+            fill_color="#238935",
             back_color="white"
         ).get_image().convert("RGBA")
 
         if LEAF_PATH and os.path.exists(LEAF_PATH):
             leaf = Image.open(LEAF_PATH).convert("RGBA")
+
+            # set leaf color as 238935
+            r, g, b = (35, 137, 53)
+            for x in range(leaf.width):
+                for y in range(leaf.height):
+                    pixel = leaf.getpixel((x, y))
+                    if pixel[3] > 0:  # if not transparent
+                        leaf.putpixel((x, y), (r, g, b, pixel[3]))
 
             qr_w, qr_h = qr_img.size
             icon_size = qr_w // 5
@@ -234,7 +242,7 @@ class DatabaseManager:
         draw.text(
             (x_title, y_title),
             common_name,
-            fill="#2A9D8F",
+            fill="#238935",
             font=font_title
         )
 

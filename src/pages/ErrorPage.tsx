@@ -41,13 +41,13 @@ export default function ErrorPage({ code = 500 }: ErrorPageProps) {
 	const { title, description } = getErrorMeta(code);
 
 	return (
-		<div className="min-h-screen bg-gradient-to-b from-green-50 to-white font-sans relative">
+		<div className="min-h-screen bg-gradient-to-b from-primary/10 to-white font-sans relative">
 			<FallingLeaves />
 
 			<main className="relative z-10 max-w-3xl mx-auto px-6 py-20">
 				<Card className="border-slate-200 bg-white/95 shadow-sm">
 					<CardHeader className="text-center pb-4">
-						<div className="mx-auto mb-4 h-14 w-14 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center">
+						<div className="mx-auto mb-4 h-14 w-14 rounded-full bg-primary/10 text-primary flex items-center justify-center">
 							<AlertTriangle className="h-7 w-7" />
 						</div>
 						<p className="text-sm uppercase tracking-widest text-slate-500 font-semibold">
@@ -62,7 +62,7 @@ export default function ErrorPage({ code = 500 }: ErrorPageProps) {
 						</p>
 
 						<div className="mt-8 flex items-center justify-center gap-3 flex-wrap">
-							<Button asChild className="bg-green-600 hover:bg-green-700 text-white">
+							<Button asChild className="bg-primary hover:bg-primary/90 text-white">
 								<Link to="/">
 									<Home className="mr-2 h-4 w-4" />
 									Ir al inicio

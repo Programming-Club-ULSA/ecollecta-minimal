@@ -99,7 +99,7 @@ function getStatusStyle(status: IUCNStatus): StatusStyle {
 
   return {
     label: "Normal",
-    chipClassName: "bg-[#30b778] text-white",
+    chipClassName: "bg-primary text-white",
   };
 }
 
@@ -133,7 +133,7 @@ function Home() {
       <FallingLeaves />
 
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute -left-28 top-[-140px] h-[340px] w-[340px] rounded-full bg-[#238937]/20 blur-3xl" />
+        <div className="absolute -left-28 top-[-140px] h-[340px] w-[340px] rounded-full bg-primary/20 blur-3xl" />
         <div className="absolute right-[-80px] top-[90px] h-[300px] w-[300px] rounded-full bg-[#140dbd]/16 blur-3xl" />
         <div className="absolute bottom-[-140px] left-1/2 h-[320px] w-[320px] -translate-x-1/2 rounded-full bg-[#ffb13c]/18 blur-3xl" />
       </div>
@@ -146,7 +146,7 @@ function Home() {
         />
 
         <div className="mt-7 flex items-center justify-center gap-3">
-          <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#238937]/12 text-[#238937]">
+          <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-primary/12 text-primary">
             <Leaf className="h-6 w-6" />
           </span>
           <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
@@ -161,7 +161,7 @@ function Home() {
 
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <Button
-            className="h-11 rounded-full bg-[#238937] px-6 text-white hover:bg-[#1d7130]"
+            className="h-11 rounded-full bg-primary px-6 text-white hover:bg-primary/90"
             onClick={() => scrollToSection("qr-info")}
           >
             <QrCode className="mr-1 h-4 w-4" />
@@ -179,8 +179,8 @@ function Home() {
         </div>
 
         <div className="mx-auto mt-8 grid max-w-3xl grid-cols-1 gap-3 sm:grid-cols-3">
-          <div className="rounded-2xl border border-[#238937]/20 bg-white/80 p-3 text-center">
-            <p className="text-2xl font-extrabold text-[#238937]">{totalSpecies}</p>
+          <div className="rounded-2xl border border-primary/20 bg-white/80 p-3 text-center">
+            <p className="text-2xl font-extrabold text-primary">{totalSpecies}</p>
             <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-600">
               Especies
             </p>
@@ -221,10 +221,10 @@ function Home() {
             return (
               <Card
                 key={item.title}
-                className="border-[#238937]/20 bg-white/90 py-5 shadow-[0_20px_45px_-35px_rgba(35,137,55,0.55)]"
+                className="border-primary/20 bg-white/90 py-5 shadow-[0_20px_45px_-35px_rgba(35,137,53,0.55)]"
               >
                 <CardHeader className="px-5">
-                  <div className="mb-1 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#238937]/10 text-[#238937]">
+                  <div className="mb-1 inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
                     <Icon className="h-5 w-5" />
                   </div>
                   <CardTitle className="text-lg leading-tight text-slate-900">
@@ -240,7 +240,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="relative z-10 border-y border-[#140dbd]/15 bg-[#eef2ff]/70 py-16">
+      <section className="relative z-10 border-y border-[#140dff]/15 bg-[#8899cc] py-16">
         <div className="mx-auto max-w-6xl px-6">
           <p className="text-center text-xs font-semibold uppercase tracking-[0.18em] text-[#140dbd]">
             Identidad Lasallista
@@ -257,10 +257,10 @@ function Home() {
               return (
                 <Card
                   key={value.title}
-                  className="border-[#140dbd]/20 bg-white/90 py-5 shadow-[0_20px_40px_-35px_rgba(20,13,189,0.55)]"
+                  className="border-[#140dbd]/50 bg-white/90 py-5 shadow-[0_20px_40px_-35px_rgba(20,13,189,0.55)]"
                 >
                   <CardHeader className="px-5">
-                    <div className="mb-1 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#140dbd]/10 text-[#140dbd]">
+                    <div className="mb-1 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#140dbd]/10 text-[#0000bb]">
                       <Icon className="h-5 w-5" />
                     </div>
                     <CardTitle className="text-lg text-slate-900">{value.title}</CardTitle>
@@ -290,7 +290,7 @@ function Home() {
           <Button
             asChild
             variant="outline"
-            className="rounded-full border-[#238937]/30 bg-white text-[#238937] hover:bg-[#238937]/5"
+            className="rounded-full border-primary/30 bg-white text-primary hover:bg-primary/5"
           >
             <Link to="/archive">
               Ver Coleccion Completa
@@ -306,7 +306,7 @@ function Home() {
             return (
               <Card
                 key={tree.id}
-                className="group relative isolate gap-0 overflow-hidden border border-[#238937]/20 bg-white p-0 shadow-[0_20px_55px_-35px_rgba(15,23,42,0.45)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_26px_65px_-30px_rgba(20,13,189,0.45)]"
+                className="group relative isolate gap-0 overflow-hidden border border-primary/20 bg-white p-0 shadow-[0_20px_55px_-35px_rgba(15,23,42,0.45)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_26px_65px_-30px_rgba(20,13,189,0.45)]"
               >
                 <span
                   className={`pointer-events-none absolute right-4 top-4 z-20 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] shadow-md transition-transform duration-300 group-hover:-translate-y-0.5 ${statusStyle.chipClassName}`}
@@ -332,7 +332,7 @@ function Home() {
                 <CardContent className="bg-white p-5">
                   <Button
                     asChild
-                    className="h-10 w-full rounded-full bg-[#238937] text-white transition-all duration-300 group-hover:bg-[#140dbd]"
+                    className="h-10 w-full rounded-full bg-primary text-white transition-all duration-300 group-hover:bg-[#140dbd]"
                   >
                     <Link to={`/species/${tree.id}`}>
                       Explorar Ficha
@@ -347,7 +347,7 @@ function Home() {
       </section>
 
       <section className="relative z-10 mx-auto max-w-6xl px-6 pb-10">
-        <div className="rounded-3xl bg-gradient-to-r from-[#238937] via-[#1f7b33] to-[#140dbd] px-8 py-10 text-center text-white shadow-[0_30px_70px_-35px_rgba(20,13,189,0.55)] md:px-10">
+        <div className="rounded-3xl bg-gradient-to-r from-primary via-primary/90 to-[#0000bb] px-8 py-10 text-center text-white shadow-[0_30px_70px_-35px_rgba(20,13,189,0.55)] md:px-10">
           <Trees className="mx-auto mb-5 h-10 w-10" />
 
           <h3 className="text-2xl font-bold md:text-3xl">
@@ -372,7 +372,7 @@ function Home() {
         id="qr-info"
         className="relative z-10 mx-auto max-w-5xl scroll-mt-24 px-6 pb-20 pt-8"
       >
-        <div className="rounded-3xl border border-[#238937]/20 bg-white/92 p-8 shadow-[0_24px_60px_-35px_rgba(35,137,55,0.5)] md:p-10">
+        <div className="rounded-3xl border border-primary/20 bg-white/92 p-8 shadow-[0_24px_60px_-35px_rgba(35,137,53,0.5)] md:p-10">
           <p className="text-center text-xs font-semibold uppercase tracking-[0.18em] text-[#140dbd]">
             Experiencia Digital
           </p>
@@ -398,7 +398,7 @@ function Home() {
           <div className="mt-8 flex justify-center">
             <Button
               asChild
-              className="h-11 rounded-full bg-[#238937] px-7 text-white hover:bg-[#1d7130]"
+              className="h-11 rounded-full bg-primary px-7 text-white hover:bg-primary/90"
             >
               <Link to="/archive">
                 Iniciar Recorrido Botanico
@@ -409,9 +409,9 @@ function Home() {
         </div>
       </section>
 
-      <footer className="relative z-10 border-t border-[#238937]/15 bg-white/80">
+      <footer className="relative z-10 border-t border-primary/15 bg-white/80">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-6 py-8 text-center sm:flex-row sm:text-left">
-          <p className="text-sm font-semibold text-[#238937]">
+          <p className="text-sm font-semibold text-primary">
             Club de Programacion ULSA | Ecollecta ULSA
           </p>
 
